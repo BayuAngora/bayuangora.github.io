@@ -1,5 +1,6 @@
 {
   "name": "eleventy",
+  "main": "index.md",
   "scripts": {
     "build": "npx @11ty/eleventy"
   }
