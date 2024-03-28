@@ -2,6 +2,8 @@
   "name": "eleventy",
   "main": "index.md",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy"
+	
   }
 }
