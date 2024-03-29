@@ -1,6 +1,8 @@
 ---
 title: About
 layout: page.html
+permalink: /about/
+summary: Blogger, freethinker, visual artist. Listed on various creative awards.
 ---
 
 <section class="box">
