@@ -12,8 +12,7 @@ return {
     input: ".",
     output: "_site",
     data: "static",
-    layouts: "layouts/_default",
-    includes: "layouts/partials"
+    layouts: "layouts"
   },
   passthroughFileCopy: true
   };
