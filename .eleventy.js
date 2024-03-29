@@ -1,6 +1,5 @@
 module.exports = function(eleventyConfig) {
 
-
   eleventyConfig.addLayoutAlias("index", "index.html");
   eleventyConfig.addLayoutAlias("list", "list.html");
   eleventyConfig.addLayoutAlias("page", "page.html");
