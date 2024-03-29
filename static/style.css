@@ -1,0 +1,226 @@
+html {
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+-webkit-tap-highlight-color: transparent;
+}
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 50rem;
+line-height: 1.4;
+margin: auto;
+background: linear-gradient(150deg,#300,#123);
+background-color: #000;
+}
+* {
+color: #fff;
+outline: none;
+user-select: none;
+text-decoration: none;
+font-family: "font", sans-serif;
+transition: color 1s, background 1s, border 1s, text-shadow 1s;
+}
+*:focus {
+outline: .01px solid rgba(0,0,0,0);
+}
+::selection {
+color: #e00;
+background: transparent;
+text-shadow: .4px .4px .2px #222;
+}
+h1, h2, h3, h4, h5, h6, p, b {
+animation: fadeIn 1s;
+}
+h1, h2 {
+margin: 0 0 .25rem;
+font-size: 1.5rem;
+}
+h3, h4, h5, h6, p, a {
+margin: 0 0 .5rem;
+font-size: 1.2rem;
+}
+hr {
+margin: 1rem auto;
+border: .05rem solid rgba(250,250,250,.75);
+}
+img {
+width: 100%;
+margin: .25rem auto;
+border-radius: .25rem;
+animation: fadeIn 1s;
+}
+main {
+padding: 1rem 1.5rem;
+animation: fadeUp 1s;
+}
+header, footer, input,
+.center, .button, .search {
+text-align: center;
+}
+.justify {
+margin: .5rem auto;
+text-align: justify;
+}
+.gallery {
+margin: .5rem .5rem .25rem;
+text-align: center;
+}
+.gallery img {
+margin: -.1rem auto;
+transition: 1s;
+}
+.gallery img:focus {
+width: 98%;
+}
+.big { width: 98%; }
+.half { width: 48.5%; }
+.small { width: 32%; }
+.icon {
+width: 3rem;
+fill: #fff;
+transition: fill 1s;
+}
+.menu, .menu a {
+margin: 1.25rem auto -.5rem;
+padding: 0 .5rem;
+}
+.title {
+padding: .5rem 0 0;
+}
+.content {
+padding: 0 0 .5rem;
+}
+.content p, .content a {
+text-shadow: .4px .4px .2px #222;
+}
+.box, .button, .search, .paginator a {
+background: rgba(0,0,0,.75);
+background-color: rgba(0,0,0,.75);
+border: .1rem solid rgba(250,250,250,.75);
+border-radius: .5rem;
+box-sizing: border-box;
+}
+.box {
+margin: 0 0 1rem;
+padding: .5rem 1.5rem;
+}
+.button {
+color: #fff;
+background: linear-gradient(150deg,#300,#123);
+background-color: #000;
+}
+.button, .search {
+width: 100%;
+padding: .85rem 0 1rem;
+font-size: 1.2rem;
+}
+.button, .search, .paginator,
+.copyright, .copyright a {
+line-height: 1.25;
+font-weight: 700;
+text-shadow: none;
+}
+.paginator {
+display: flex;
+margin: 1rem auto -.3rem;
+}
+.paginator a {
+padding: 0 1.1rem;
+font-size: 2.25rem;
+}
+.favicon {
+width: 3rem;
+margin: -.1rem auto .3rem;
+}
+.favicon img {
+animation: heartbeat 1.2s infinite;
+}
+.source, .source a {
+margin: -1rem auto -.5rem;
+padding: .5rem;
+}
+.copyright, .copyright a {
+max-height: 100%;
+margin: 0 auto 1.25rem;
+color: #fff;
+font-size: .8rem;
+}
+* a:hover, .mode * a:hover,
+a *:hover, .mode a *:hover {
+fill: #e00;
+color: #e00;
+text-shadow: .4px .4px .2px #222;
+}
+.mode, .mode .button {
+background: linear-gradient(150deg,#eba,#bcd);
+background-color: #000;
+}
+.mode * {
+color: #000;
+}
+.mode hr {
+border: .05rem solid rgba(0,0,0,1);
+}
+.mode .icon {
+fill: #000;
+}
+.mode .box, .mode .search,
+.mode .paginator a {
+background: rgba(250,250,250,.75);
+background-color: rgba(250,250,250,.75);
+}
+.mode .button, .mode .button a,
+.mode .copyright, .mode .copyright a {
+color: #000;
+}
+@font-face {
+font-family: "font";
+src: url("https://angora.twic.pics/font.woff2");
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+@keyframes fadeUp {
+from { opacity: 0; transform: translate3d(0,.5rem,0); }
+to { opacity: 1; transform: translate3d(0,0,0); }
+}
+@keyframes heartbeat {
+0% { transform: scale(1); }
+20% { transform: scale(1.05); }
+40% { transform: scale(1.02); }
+50% { transform: scale(1.10); }
+100% { transform: scale(1); }
+}
+.motion li {
+position: fixed;
+display: block;
+top: 0%;
+z-index: -1;
+width: .1rem;
+background: rgba(250,250,250,.75);
+animation: animate 10s linear infinite;
+}
+.motion li:nth-child(1)
+{ left: 0%; height: 8rem; animation-duration: 20s; }
+.motion li:nth-child(2)
+{ left: 15%; height: 4rem; animation-duration: 12s; }
+.motion li:nth-child(3)
+{ left: 30%; height: 6rem; animation-duration: 16s; }
+.motion li:nth-child(4)
+{ left: 45%; height: 2rem; animation-duration: 8s; }
+.motion li:nth-child(5)
+{ right: 0%; height: 2rem; animation-duration: 6s; }
+.motion li:nth-child(6)
+{ right: 15%; height: 8rem; animation-duration: 18s; }
+.motion li:nth-child(7)
+{ right: 30%; height: 4rem; animation-duration: 10s; }
+.motion li:nth-child(8)
+{ right: 45%; height: 6rem; animation-duration: 14s; }
+@keyframes animate {
+0% { transform: rotate(150deg) translateY(0);
+opacity: .5; border-radius: 50%; }
+100% { transform: rotate(150deg) translateY(-100rem);
+opacity: 0; border-radius: 50%; }
+}
