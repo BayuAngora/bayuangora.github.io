@@ -10,9 +10,6 @@ return {
     layouts: "layouts/_default",
     includes: "layouts/partials"
   },
-  templateFormats : ["md", "njk", "html"],
-  markdownTemplateEngine : "njk",
-  htmlTemplateEngine : "njk",
   passthroughFileCopy: true
   };
 };
