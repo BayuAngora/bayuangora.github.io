@@ -5,9 +5,9 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
+      data: ".",
       input: ".",
       output: "_site",
-      data: "layouts",
       layouts: "layouts/_default",
       includes: "layouts/partials",
     },
