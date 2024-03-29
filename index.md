@@ -1,4 +1,4 @@
 ---
 title: Bayu Angora
-layout: index.njk
+layout: index.html
 ---
