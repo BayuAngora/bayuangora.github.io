@@ -4,6 +4,11 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy"
-	
+  },
+  "dependencies": {
+    "@11ty/eleventy": "2.0.0"
+  },
+  "engines": {
+    "node": "20"
   }
 }
