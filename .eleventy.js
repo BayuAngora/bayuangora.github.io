@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("./static/*");
+  eleventyConfig.addPassthroughCopy("static");
 
   return {
     dir: {
@@ -8,8 +8,7 @@ module.exports = function(eleventyConfig) {
       output: "_site",
       data: "layouts",
       layouts: "layouts/_default",
-      includes: "layouts/partials"
+      includes: "layouts/partials",
     },
-    passthroughFileCopy: true
-  }
-}
+  };
+};
