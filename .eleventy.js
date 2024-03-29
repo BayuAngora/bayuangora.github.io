@@ -8,11 +8,11 @@ return {
     output: "_site",
     data: "static",
     layouts: "layouts/_default",
-    includes: "layouts/partials",
+    includes: "layouts/partials"
+  },
   templateFormats : ["md", "njk", "html"],
-    markdownTemplateEngine : "njk",
-    htmlTemplateEngine : "njk",
-    passthroughFileCopy: true
-    },
+  markdownTemplateEngine : "njk",
+  htmlTemplateEngine : "njk",
+  passthroughFileCopy: true
   };
 };
