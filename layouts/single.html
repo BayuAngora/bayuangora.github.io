@@ -124,12 +124,12 @@
 </form>
 
 <div class="paginator">
-<a class="left" role="button" href="{{ if .Paginator.HasPrev }}{{ .Paginator.Prev.URL | absURL }}{{ else }}#{{ end }}">«</a>
+<a class="prev" href="{% if pagination.href.previous  %}{{ pagination.href.previous }}{% else %}#{% endif %}">«</a>
 <div id="mode" class="favicon">
 <div id="dark"><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
 <div id="light" hidden><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
 </div>
-<a class="right" role="button" href="{{ if .Paginator.HasNext }}{{ .Paginator.Next.URL | absURL }}{{ else }}#{{ end }}">»</a>
+<a class="next" href="{% if pagination.href.next %}{{ pagination.href.next }}{% else %}#{% endif %}">»</a>
 </div>
 
 </main>
