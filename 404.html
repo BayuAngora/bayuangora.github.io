@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="view-transition" content="same-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Page Not Found</title>
+<meta name="keywords" content="{{ site.title }}">
+<meta name="description" content="
+Check your connection or search another page!
+">
+
+<meta name="theme-color" content="#000">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Page Not Found">
+<meta name="apple-mobile-web-app-title" content="Page Not Found">
+<meta name="msapplication-starturl" content="{{ site.baseurl }}">
+<meta name="image" content="{{ site.baseurl }}bayuangora.webp">
+
+<link rel="canonical" href="{{ page.url }}">
+<link rel="manifest" href="{{ site.baseurl }}manifest.json">
+<link rel="icon" type="image/png" href="{{ site.baseurl }}favicon.png">
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}favicon.svg">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
+<link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
+
+<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}start.css">
+
+</head>
+
+<body>
+
+<header id="header">
+
+<a href="#main" hidden>Skip to Content</a>
+
+<h1 hidden>{{ site.title }}</h1>
+<h2 hidden>{{ site.description }}</h2>
+
+<div>
+<a href="{{ site.baseurl }}">
+<img class="profile" alt="{{ site.title }}" src="{{ site.baseURL }}favicon.svg">
+</a>
+</div>
+
+</header>
+
+<main id="main">
+
+<div class="box">
+
+++ Page Not Found ++
+<br>
+Check Your Connection
+<br>
+Or Search Another Page
+<br>
+
+{% include "search.html" %}
+</div>
+
+</main>
+
+<div id="mode" hidden>
+<div id="dark">_</div>
+<div id="light">_</div>
+</div>
+
+<br>
+
+{% include "footer.html" %}
+</body>
+
+</html>
