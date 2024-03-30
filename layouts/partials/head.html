@@ -7,14 +7,14 @@
 <title>{{ title }} | {{ site.title }}</title>
 <meta name="keywords" content="{{ title }}">
 <meta name="description" content="
-{{ content }}
+{{ summary }}
 ">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ title }} | {{ site.title }}">
 <meta name="twitter:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta name="twitter:description" content="
-{{ content }}
+{{ summary }}
 ">
 
 <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
 <meta property="og:url" content="{{ page.url }}">
 <meta property="og:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta property="og:description" content="
-{{ content }}
+{{ summary }}
 ">
 
 <meta name="theme-color" content="#000">
@@ -50,7 +50,7 @@
 "headline": "{{ title }} | {{ site.title }}",
 "author": "{{ site.title }}",
 "image": "{{ site.baseurl }}bayuangora.webp",
-"description": "{{ content }}"
+"description": "{{ summary }}"
 }
 </script>
 
