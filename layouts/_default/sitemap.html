@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{% include "head.html" %}
+<body>
+
+{% include "header.html" %}
+<main id="main">
+
+<div class="box">
+<a href="{{ page.url }}">
+<div class="center">
+<h1>{{ title }}</h1>
+</div>
+</a>
+</div>
+
+<article class="box">
+<div class="justify">
+<h2 hidden>Freethinker Indonesia</h2>
+<div class="content">
+
+<a href="{{ page.url }}">{{ title }}</a>
+
+</div>
+</div>
+</article>
+
+{% include "search.html" %}
+<div class="paginator">
+<div id="mode" class="favicon">
+<div id="dark"><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
+<div id="light" hidden><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
+</div>
+</div>
+
+</main>
+
+{% include "footer.html" %}
+</body>
+
+</html>
