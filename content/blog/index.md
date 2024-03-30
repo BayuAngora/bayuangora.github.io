@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: list.html
+layout: list
 permalink: /blog/
 ---
 
