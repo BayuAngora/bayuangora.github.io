@@ -20,7 +20,8 @@ return {
     input: ".",
     output: "_site",
     data: "static",
-    layouts: "layouts"
+    layouts: "layouts/_default",
+    includes: "layouts/partials"
   },
   passthroughFileCopy: true,
   htmlTemplateEngine: "liquid",
