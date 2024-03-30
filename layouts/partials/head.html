@@ -1,0 +1,57 @@
+<head>
+
+<meta charset="utf-8">
+<meta name="view-transition" content="same-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ title }} | {{ site.title }}</title>
+<meta name="keywords" content="{{ title }}">
+<meta name="description" content="
+{{ content }}
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title }} | {{ site.title }}">
+<meta name="twitter:image" content="{{ site.baseurl }}bayuangora.webp">
+<meta name="twitter:description" content="
+{{ content }}
+">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }} | {{ site.title }}">
+<meta property="og:url" content="{{ page.url }}">
+<meta property="og:image" content="{{ site.baseurl }}bayuangora.webp">
+<meta property="og:description" content="
+{{ content }}
+">
+
+<meta name="theme-color" content="#000">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="{{ site.title }}">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="msapplication-starturl" content="{{ site.baseurl }}">
+<meta name="image" content="{{ site.baseurl }}bayuangora.webp">
+
+<link rel="canonical" href="{{ page.url }}">
+<link rel="manifest" href="{{ site.baseurl }}manifest.json">
+<link rel="icon" type="image/png" href="{{ site.baseurl }}favicon.png">
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}favicon.svg">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
+<link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
+
+<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}style.css">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Article",
+"headline": "{{ title }} | {{ site.title }}",
+"author": "{{ site.title }}",
+"image": "{{ site.baseurl }}bayuangora.webp",
+"description": "{{ content }}"
+}
+</script>
+
+</head>
