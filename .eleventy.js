@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("single", "single.html");
   eleventyConfig.addLayoutAlias("sitemap", "sitemap.html");
   eleventyConfig.addPassthroughCopy({ "static": "/" });
-  eleventyConfig.addPassthroughCopy({ "**/*.js": "/" });
+  eleventyConfig.addPassthroughCopy({ "static/*.js": "/" });
 
 return {
   dir: {
