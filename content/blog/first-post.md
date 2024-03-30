@@ -1,6 +1,7 @@
 ---
 title: First Post
-layout: single.html
+layout: single
+permalink: /first-post/
 ---
 
 This is my first post on blog.
