@@ -1,6 +1,6 @@
 ---
 title: About
-layout: page.html
+layout: page
 permalink: /about/
 summary: Blogger, freethinker, visual artist. Listed on various creative awards.
 ---
