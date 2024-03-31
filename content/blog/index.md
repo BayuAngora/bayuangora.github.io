@@ -5,7 +5,6 @@ summary: Blog by Bayu Angora
 permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
 pagination:
   size: 6
-  alias: blog
   reverse: true
   data: collections.blog
 ---
