@@ -1,23 +1,5 @@
 module.exports = function(eleventyConfig) {
 
-const options = {
-    html: true,
-    breaks: true,
-    linkify: false
-  };
-return {
-  dir: {
-    input: ".",
-    output: "_site",
-    data: "static",
-    layouts: "layouts/_default",
-    includes: "layouts/partials"
-  },
-  passthroughFileCopy: true,
-  htmlTemplateEngine: "liquid",
-  templateFormats: ["html", "md"]
-  };
-
   eleventyConfig.addLayoutAlias("index", "index.html");
   eleventyConfig.addLayoutAlias("list", "list.html");
   eleventyConfig.addLayoutAlias("page", "page.html");
@@ -50,5 +32,24 @@ return {
       }
     });
     return excerpt;
+  };
+
+const options = {
+  html: true,
+  breaks: true,
+  linkify: false
+  };
+
+return {
+  dir: {
+    input: ".",
+    output: "_site",
+    data: "static",
+    layouts: "layouts/_default",
+    includes: "layouts/partials"
+  },
+  passthroughFileCopy: true,
+  htmlTemplateEngine: "liquid",
+  templateFormats: ["html", "md"]
   };
 };
