@@ -12,7 +12,7 @@ summary: Blogger, freethinker, visual artist. Listed on various creative awards.
 <div class="content">
 <p class="center">Blogger, freethinker, visual artist. Listed on various creative awards.</p>
 <hr>
-<img class="profile" alt="Bayu Angora" src="https://id.imgix.net/bayuangora.webp">
+<img class="profile" alt="Bayu Angora" src="https://id.imgix.net/profile/inferno.webp">
 <h3 class="center">ᮘᮚᮥ ᮃᮍᮧᮛ</h3>
 </div>
 </section>
