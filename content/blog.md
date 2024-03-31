@@ -10,15 +10,15 @@ pagination:
 ---
 
 {% for blog in blogs %}
-<article class="list">
+<article class="box">
 <a href="{{ blog.url }}">
-<header class="list-header">
+<div class="title">
 <h2>{{ blog.data.title }}</h2>
-</header>
-<div class="list-content">
-<h3>
+</div>
+<div class="content">
+<p>
 {% excerpt blog %}..
-</h3>
+</p>
 </div>
 </a>
 </article>
