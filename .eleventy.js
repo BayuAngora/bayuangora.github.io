@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "static": "/" });
 
   eleventyConfig.addCollection("tagGroup", function (collectionApi) {
-  return collectionApi.getFilteredByTags("blog");
+  return collectionApi.getFilteredByTags("blog", "quote");
 });
 
   eleventyConfig.addShortcode("excerpt", article => extractExcerpt(article));
