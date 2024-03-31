@@ -14,7 +14,7 @@
 </div>
 </a>
 </div>
-{% for post in collections.blog %}
+
 <article class="box">
 <a href="{{ page.url }}">
 <div class="title">
@@ -27,7 +27,7 @@
 </div>
 </a>
 </article>
-{% endfor %}
+
 {% include "search.html" %}
 <div class="paginator">
 <a class="prev" href="{% if pagination.href.previous %}{{ pagination.href.previous }}{% else %}#{% endif %}">«</a>
