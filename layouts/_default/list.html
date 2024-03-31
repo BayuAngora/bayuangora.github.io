@@ -15,19 +15,7 @@
 </a>
 </div>
 
-<article class="box">
-<a href="{{ page.url }}">
-<div class="title">
-<h2>{{ title }}</h2>
-</div>
-<div class="content">
-<p>
 {{ content }}
-</p>
-</div>
-</a>
-</article>
-
 {% include "search.html" %}
 <div class="paginator">
 <a class="prev" href="{% if pagination.href.previous %}{{ pagination.href.previous }}{% else %}#{% endif %}">«</a>
