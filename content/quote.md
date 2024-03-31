@@ -18,7 +18,7 @@ pagination:
 </div>
 <div class="content">
 <p>
-{% excerpt quotes %}..
+{% excerpt quote %}..
 </p>
 </div>
 </a>
