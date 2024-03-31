@@ -10,7 +10,7 @@ pagination:
   data: collections.blog
 ---
 
-{% for blog in blogs %}
+{% for blog in blog %}
 <article class="box">
 <a href="{{ site.baseurl }}{{ blog.data.title | slug }}/">
 <div class="title">
