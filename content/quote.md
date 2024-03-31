@@ -5,6 +5,7 @@ summary: Quote by Bayu Angora
 permalink: "quote/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
 pagination:
   size: 6
+  alias: quote
   reverse: true
   data: collections.quote
 ---
