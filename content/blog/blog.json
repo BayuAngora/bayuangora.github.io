@@ -1,5 +1,5 @@
 {
   "tags": "blog",
   "layout": "single",
-  "permalink": "{{ blog.title | slug }}/"
+  "permalink": "{{ title | slug }}/"
 }
