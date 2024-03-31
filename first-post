@@ -7,22 +7,22 @@
 <meta name="view-transition" content="same-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Second Post | Bayu Angora</title>
-<meta name="keywords" content="Second Post">
+<title>First Post | Bayu Angora</title>
+<meta name="keywords" content="First Post">
 <meta name="description" content="
 
 ">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Second Post | Bayu Angora">
+<meta name="twitter:title" content="First Post | Bayu Angora">
 <meta name="twitter:image" content="https://bayuangora.github.io/11ty/bayuangora.webp">
 <meta name="twitter:description" content="
 
 ">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Second Post | Bayu Angora">
-<meta property="og:url" content="/second-post/">
+<meta property="og:title" content="First Post | Bayu Angora">
+<meta property="og:url" content="/first-post">
 <meta property="og:image" content="https://bayuangora.github.io/11ty/bayuangora.webp">
 <meta property="og:description" content="
 
@@ -37,7 +37,7 @@
 <meta name="msapplication-starturl" content="https://bayuangora.github.io/11ty/">
 <meta name="image" content="https://bayuangora.github.io/11ty/bayuangora.webp">
 
-<link rel="canonical" href="/second-post/">
+<link rel="canonical" href="/first-post">
 <link rel="manifest" href="https://bayuangora.github.io/11ty/manifest.json">
 <link rel="icon" type="image/png" href="https://bayuangora.github.io/11ty/favicon.png">
 <link rel="icon" type="image/svg+xml" href="https://bayuangora.github.io/11ty/favicon.svg">
@@ -49,7 +49,7 @@
 {
 "@context": "https://schema.org",
 "@type": "Article",
-"headline": "Second Post | Bayu Angora",
+"headline": "First Post | Bayu Angora",
 "author": "Bayu Angora",
 "image": "https://bayuangora.github.io/11ty/bayuangora.webp",
 "description": ""
@@ -96,21 +96,21 @@
 <main id="main">
 
 <div class="box">
-<a href="/second-post/">
+<a href="/first-post">
 <div class="center">
-<h1>Second Post</h1>
+<h1>First Post</h1>
 </div>
 </a>
 </div>
 
 <article class="box">
-<a href="/second-post/">
+<a href="/first-post">
 <div class="title">
-<h2>Second Post</h2>
+<h2>First Post</h2>
 </div>
 <div class="content">
 <p>
-<p>This is my second post on blog.</p>
+<p>This is my first post on blog.</p>
 
 </p>
 </div>
