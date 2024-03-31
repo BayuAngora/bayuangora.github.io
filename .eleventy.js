@@ -9,6 +9,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("single", "single.html");
   eleventyConfig.addLayoutAlias("sitemap", "sitemap.html");
 
+  eleventyConfig.addCollection("tagGroup", function (collectionApi) {
+  return collectionApi.getFilteredByTags("blog");
+});
+
 const options = {
     html: true,
     breaks: true,
