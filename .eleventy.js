@@ -1,5 +1,23 @@
 module.exports = function(eleventyConfig) {
 
+const options = {
+    html: true,
+    breaks: true,
+    linkify: false
+  };
+return {
+  dir: {
+    input: ".",
+    output: "_site",
+    data: "static",
+    layouts: "layouts/_default",
+    includes: "layouts/partials"
+  },
+  passthroughFileCopy: true,
+  htmlTemplateEngine: "liquid",
+  templateFormats: ["html", "md"]
+  };
+
   eleventyConfig.addLayoutAlias("index", "index.html");
   eleventyConfig.addLayoutAlias("list", "list.html");
   eleventyConfig.addLayoutAlias("page", "page.html");
@@ -29,27 +47,8 @@ module.exports = function(eleventyConfig) {
     if (startPosition !== -1 && endPosition !== -1) {
       excerpt = content.substring(startPosition + separators.start.length, endPosition).trim();
       return true;
-    }
-  });
-  return excerpt;
-};
-
-const options = {
-    html: true,
-    breaks: true,
-    linkify: false
-  };
-
-return {
-  dir: {
-    input: ".",
-    output: "_site",
-    data: "static",
-    layouts: "layouts/_default",
-    includes: "layouts/partials"
-  },
-  passthroughFileCopy: true,
-  htmlTemplateEngine: "liquid",
-  templateFormats: ["html", "md"]
+      }
+    });
+    return excerpt;
   };
 };
