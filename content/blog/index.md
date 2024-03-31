@@ -1,10 +1,25 @@
 ---
 title: Blog
 layout: list
-permalink: /blog/
-summary: Blog by Bayu Angora
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
 pagination:
-  data: collections.post
+  size: 6
+  alias: blogs
+  reverse: true
+  data: collections.blog
 ---
 
-Blog by Bayu Angora
+{% for blog in blogs %}
+<article class="list">
+<a href="{{ blog.url }}">
+<header class="list-header">
+<h2>{{ blog.data.title }}</h2>
+</header>
+<div class="list-content">
+<h3>
+{% excerpt blog %}..
+</h3>
+</div>
+</a>
+</article>
+{% endfor %}
