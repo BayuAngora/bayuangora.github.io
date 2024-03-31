@@ -1,12 +1,7 @@
 ---
 title: Blog
 layout: list
-permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
-pagination:
-  size: 6
-  alias: blogs
-  reverse: true
-  data: collections.blog
+permalink: /blog/
 ---
 
 {% for blog in blogs %}
