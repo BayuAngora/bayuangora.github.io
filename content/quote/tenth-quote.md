@@ -3,4 +3,4 @@ title: Tenth Quote
 layout: single
 ---
 
-This is my tenth blog.
+This is my tenth quote.
