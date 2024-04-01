@@ -1,5 +1,4 @@
 {
   "tags": "quote",
-  "layout": "single",
-  "permalink": "{{ page.fileSlug }}/"
+  "layout": "single"
 }
