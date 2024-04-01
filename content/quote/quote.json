@@ -1,5 +1,5 @@
 {
   "tags": "quote",
   "layout": "single",
-  "permalink": "{{ title | slug }}/"
+  "permalinkBypassOutputDir": "true"
 }
