@@ -2,7 +2,7 @@
 title: Blog
 layout: list
 summary: Blog by Bayu Angora
-permalink: "{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
+permalink: "blog/"
 pagination:
   size: 6
   alias: blogs
