@@ -1,5 +1,4 @@
 {
   "tags": "blog",
-  "layout": "single",
-  "url": "{{ fileSlug }}"
+  "layout": "single"
 }
