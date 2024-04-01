@@ -1,5 +1,4 @@
 {
   "tags": "quote",
-  "layout": "single",
-  "permalink": "{{ title | slug }}/"
+  "layout": "single"
 }
