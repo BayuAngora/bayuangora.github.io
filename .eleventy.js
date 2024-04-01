@@ -40,7 +40,7 @@ return {
   dir: {
     input: ".",
     output: "_site",
-    data: "static",
+    data: "content",
     layouts: "layouts/_default",
     includes: "layouts/partials"
   },
