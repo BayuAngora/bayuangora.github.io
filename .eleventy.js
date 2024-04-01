@@ -14,7 +14,7 @@ return {
     input: ".",
     output: "_site",
     data: "layouts",
-    layouts: "layouts/_default",
+    layouts: "layouts/default",
     includes: "layouts/partials"
   },
   passthroughFileCopy: true,
