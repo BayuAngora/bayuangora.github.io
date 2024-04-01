@@ -1,5 +1,4 @@
 {
   "tags": "blog",
-  "layout": "single",
-  "permalink": "{{ site.baseurl }}blog/"
+  "layout": "single"
 }
