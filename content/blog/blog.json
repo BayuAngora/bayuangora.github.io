@@ -1,5 +1,4 @@
 {
   "tags": "blog",
-  "layout": "single",
-  "permalink": "{{ page.fileSlug }}"
+  "layout": "single"
 }
