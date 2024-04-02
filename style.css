@@ -94,6 +94,12 @@ padding: 0 0 .5rem;
 .content p, .content a {
 text-shadow: .4px .4px .2px #222;
 }
+.share, .share img {
+width: 1.5rem;
+margin: -2rem 0 0 auto;
+fill: #fff;
+transition: fill 1s;
+}
 .box, .button, .search, .paginator a {
 background: rgba(0,0,0,.75);
 background-color: rgba(0,0,0,.75);
@@ -127,7 +133,7 @@ margin: 1rem auto -.3rem;
 }
 .paginator a {
 padding: 0 1.1rem;
-font-size: 2.25rem;
+font-size: 2.5rem;
 }
 .favicon {
 margin: 0 auto .2rem;
@@ -163,6 +169,9 @@ color: #000;
 border: .05rem solid rgba(0,0,0,1);
 }
 .mode .icon {
+fill: #000;
+}
+.mode .share {
 fill: #000;
 }
 .mode .box, .mode .search,
