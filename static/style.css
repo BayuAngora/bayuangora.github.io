@@ -94,7 +94,7 @@ padding: 0 0 .5rem;
 .content p, .content a {
 text-shadow: .4px .4px .2px #222;
 }
-.share, .share img {
+.share, .share a {
 width: 1.5rem;
 margin: -2rem 0 0 auto;
 fill: #fff;
@@ -171,7 +171,7 @@ border: .05rem solid rgba(0,0,0,1);
 .mode .icon {
 fill: #000;
 }
-.mode .share {
+.mode .share, .mode .share a {
 fill: #000;
 }
 .mode .box, .mode .search,
