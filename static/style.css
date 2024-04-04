@@ -96,7 +96,7 @@ text-shadow: .4px .4px .2px #222;
 }
 .share, .share a {
 width: 1.5rem;
-margin: -2rem 0 0 auto;
+margin: -2.5rem 0 .5rem auto;
 fill: #fff;
 transition: fill 1s;
 }
@@ -110,6 +110,9 @@ box-sizing: border-box;
 .box {
 margin: 0 0 1rem;
 padding: .5rem 1.5rem;
+}
+.box h1 {
+max-height: 100%;
 }
 .button {
 color: #fff;
@@ -184,6 +187,7 @@ background-color: rgba(250,250,250,.75);
 color: #000;
 }
 @font-face {
+font-display: swap;
 font-family: "font";
 src: url("https://angora.twic.pics/font.woff2");
 }
