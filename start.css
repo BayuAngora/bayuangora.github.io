@@ -107,6 +107,7 @@ color: #e00;
 text-shadow: .4px .4px .2px #222;
 }
 @font-face {
+font-display: swap;
 font-family: "font";
 src: url("https://angora.twic.pics/font.woff2");
 }
