@@ -12,7 +12,7 @@ pagination:
 
 {% for quote in quotes %}
 <article class="box">
-<a href="{{ site.baseurl }}quote/{{ blog.data.title | slug }}/">
+<a href="{{ site.baseurl }}quote/{{ quote.data.title | slug }}/">
 <div class="title">
 <h2>{{ quote.data.title }}</h2>
 </div>
