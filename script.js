@@ -4,11 +4,10 @@ navigator.serviceWorker.ready.then(function(registration){
 registration.sync.register("sync").then(function(){},
 function(){});});
 
-const share = document.querySelector(".share");
-share.addEventListener("click", event => {
-if (navigator.share) { navigator.share({
-title: "Bayu Angora", url: "" }).then(() => {
-console.log("Thanks");}) .catch(console.error);}});
+if (navigator.share) {navigator.share({
+title: "Bayu Angora", url: "" })
+.then(() => console.log('Successful share'))
+.catch(error => console.log('Error sharing:', error));}
 
 function setMode(e){
 var t=document.getElementById("dark"),d=document.getElementById("light");e?(d.style.display="block",t.style.display="none",
