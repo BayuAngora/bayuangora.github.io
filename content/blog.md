@@ -12,7 +12,7 @@ pagination:
 
 {% for blog in blogs %}
 <article class="box">
-<a href="{{ page.url }}/">
+<a href="<a href="{{ site.baseurl }}blog{{ blog.data.title | slug }}/">
 <div class="title">
 <h2>{{ blog.data.title }}</h2>
 </div>
