@@ -17,7 +17,9 @@ pagination:
 <h2>{{ quote.data.title }}</h2>
 </div>
 <div class="content">
-{{ content }}
+<p>
+{{ summary }}
+</p>
 </div>
 </a>
 </article>
