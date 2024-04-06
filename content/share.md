@@ -1,5 +1,5 @@
 ---
 title: Share
 layout: share
-permalink: share
+permalink: share/
 ---
