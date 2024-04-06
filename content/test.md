@@ -1,5 +1,5 @@
 ---
 title: Test
 layout: test
-permalink: test
+permalink: test/
 ---
