@@ -47,9 +47,12 @@
 "@context": "https://schema.org",
 "@type": "Article",
 "headline": "{{ title }} | {{ site.title }}",
-"author": "{{ site.title }}",
 "image": "{{ site.baseurl }}bayuangora.webp",
-"description": "{{ summary }}"
+"author": {
+  "@type": "Person",
+  "name": "{{ site.title }}",
+  "url": "{{ site.baseurl }}about/"
+  }
 }
 </script>
 
