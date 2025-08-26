@@ -10,19 +10,16 @@ justify-content: center;
 max-width: 50rem;
 line-height: 1.4;
 margin: auto;
-background: linear-gradient(150deg,#300,#123);
+background: linear-gradient(150deg,#411,#123);
 background-color: #000;
 }
 * {
-color: #fff;
-outline: none;
+color: #000;
 user-select: none;
 text-decoration: none;
+outline: 1px solid transparent;
 font-family: "font", sans-serif;
-transition: color 1s, background 1s, border 1s, text-shadow 1s;
-}
-*:focus {
-outline: .01px solid rgba(0,0,0,0);
+transition: 1s, fill .25s;
 }
 ::selection {
 color: #e00;
@@ -42,7 +39,7 @@ font-size: 1.2rem;
 }
 hr {
 margin: 1rem auto;
-border: .05rem solid rgba(250,250,250,.75);
+border: .05rem solid #000;
 }
 img {
 width: 100%;
@@ -63,12 +60,11 @@ margin: .5rem auto;
 text-align: justify;
 }
 .gallery {
-margin: .5rem -.75rem .25rem;
+margin: 0 -.75rem -.25rem;
 text-align: center;
 }
 .gallery img {
 margin: -.1rem auto;
-transition: 1s;
 }
 .gallery img:focus {
 width: 98%;
@@ -79,44 +75,35 @@ width: 98%;
 .icon {
 width: 3rem;
 fill: #fff;
-transition: fill 1s;
 }
 .menu, .menu a {
-margin: 1.25rem auto -.5rem;
-padding: 0 .5rem;
-}
-.title {
-padding: .5rem 0 0;
-}
-.content {
-padding: 0 0 .5rem;
+margin: 1.25rem .5rem -.5rem;
 }
 .content p, .content a {
 text-shadow: .4px .4px .2px #222;
 }
 .share, .share a {
 width: 1.5rem;
-margin: -2.5rem 0 .5rem auto;
-fill: #fff;
-transition: fill 1s;
+margin: -2rem 0 0 auto;
+fill: #000;
 }
 .box, .button, .search, .paginator a {
-background: rgba(0,0,0,.75);
-background-color: rgba(0,0,0,.75);
-border: .1rem solid rgba(250,250,250,.75);
+background: rgba(250,250,250,1);
+background-color: #fff;
+border: .1rem solid rgba(250,250,250,0);
 border-radius: .5rem;
 box-sizing: border-box;
 }
 .box {
 margin: 0 0 1rem;
-padding: .5rem 1.5rem;
+padding: 1rem 1.5rem;
 }
 .box h1 {
-max-height: 100%;
+margin: -.5rem auto -.25rem;
 }
 .button {
 color: #fff;
-background: linear-gradient(150deg,#300,#123);
+background: linear-gradient(150deg,#411,#123);
 background-color: #000;
 }
 .button, .search {
@@ -132,22 +119,21 @@ text-shadow: none;
 }
 .paginator {
 display: flex;
-margin: 1rem auto -.3rem;
+margin: 1rem auto 0;
 }
 .paginator a {
-padding: 0 1.1rem;
+padding: 0 1.1rem .25rem;
 font-size: 2.5rem;
 }
 .favicon {
-margin: 0 auto .2rem;
+margin: -.125rem auto .125rem;
 }
 .favicon img {
-width: 3rem;
+width: 3.25rem;
 animation: heartbeat 1.2s infinite;
 }
 .source, .source a {
-margin: -1rem auto -.5rem;
-padding: .5rem;
+margin: -.5rem .5rem 0;
 }
 .copyright, .copyright a {
 max-height: 100%;
@@ -155,32 +141,35 @@ margin: 0 auto 1.25rem;
 color: #fff;
 font-size: .8rem;
 }
-* a:hover, .mode * a:hover,
-a *:hover, .mode a *:hover {
+* a:hover, a *:hover,
+.mode * a:hover, .mode a *:hover,
+.copyright:hover, .copyright a:hover,
+.mode .copyright:hover, .mode .copyright a:hover
+{
 fill: #e00;
 color: #e00;
 text-shadow: .4px .4px .2px #222;
 }
 .mode, .mode .button {
-background: linear-gradient(150deg,#eba,#bcd);
-background-color: #000;
+background: linear-gradient(150deg,#fdc,#def);
+background-color: #fff;
 }
 .mode * {
-color: #000;
+color: #fff;
 }
 .mode hr {
-border: .05rem solid rgba(0,0,0,1);
+border: .05rem solid #fff;
 }
 .mode .icon {
 fill: #000;
 }
 .mode .share, .mode .share a {
-fill: #000;
+fill: #fff;
 }
 .mode .box, .mode .search,
 .mode .paginator a {
-background: rgba(250,250,250,.75);
-background-color: rgba(250,250,250,.75);
+background: rgba(0,0,0,1);
+background-color: #000;
 }
 .mode .button, .mode .button a,
 .mode .copyright, .mode .copyright a {
@@ -189,7 +178,7 @@ color: #000;
 @font-face {
 font-display: swap;
 font-family: "font";
-src: url("https://angora.twic.pics/font.woff2");
+src: url("/font.woff2");
 }
 @keyframes fadeIn {
 from { opacity: 0; }
