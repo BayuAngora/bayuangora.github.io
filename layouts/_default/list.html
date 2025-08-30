@@ -18,13 +18,13 @@
 {{ content }}
 {% include "search.html" %}
 <div class="paginator">
-<a class="prev" href="{% if pagination.href.previous %}{{ pagination.href.previous }}{% else %}#{% endif %}">«</a>
+<a class="prev" href="{% if pagination.href.previous %}{{ pagination.href.previous }}#{% else %}#{% endif %}">«</a>
 <div id="mode" class="favicon">
 <div id="dark"><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
 <div id="light" hidden><img alt="{{ site.title }}" src="{{ site.baseurl }}favicon.svg"></div>
 <div id="share" class="share" hidden></div>
 </div>
-<a class="next" href="{% if pagination.href.next %}{{ pagination.href.next }}{% else %}#{% endif %}">»</a>
+<a class="next" href="{% if pagination.href.next %}{{ pagination.href.next }}#{% else %}#{% endif %}">»</a>
 </div>
 
 </main>
