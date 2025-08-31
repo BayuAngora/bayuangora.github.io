@@ -24,10 +24,10 @@ summary: Blogger, freethinker, visual artist. Listed on various creative awards.
 <div class="content">
 <hr>
 <b>2009</b>
-<p>• Extension Course of Philosophy | Parahyangan University | Unpar | Bandung</p>
+<p>• Extension Course of Philosophy | Parahyangan University | Unpar</p>
 <hr>
 <b>2003</b>
-<p>• Visual Arts | Indonesian Institute of Arts and Culture | ISBI | Bandung</p>
+<p>• Arts and Design | Indonesian Institute of Arts and Culture | ISBI</p>
 </div>
 </section>
 
