@@ -18,8 +18,8 @@
 ">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.url == site.baseurl %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-<meta property="og:url" content="{% if page.url == site.baseurl %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
+<meta property="og:title" content="{% if site.baseurl %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+<meta property="og:url" content="{% if site.baseurl %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
 <meta property="og:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta property="og:description" content="
 {% if site.baseurl %}{{ site.description }}{% else %}{{ summary }}{% endif %}
