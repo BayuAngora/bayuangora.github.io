@@ -8,14 +8,24 @@
 <main id="main">
 
 <div class="box">
-<a href="{{ site.baseurl }}{{ title | slug }}/">
+<a href="{{ .site.baseurl }}{{ title | slug }}/">
 <div class="center">
 <h1>{{ title }}</h1>
 </div>
 </a>
 </div>
 
+<article class="box">
+<a href="{{ site.baseurl }}{{ title | slug }}/">
+<div class="title">
+<h2>{{ title }}</h2>
+</div>
+<div class="content">
 {{ content }}
+</div>
+</a>
+</article>
+{{ end }}
 {% include "search.html" %}
 <div class="paginator">
 <a class="prev" href="{% if pagination.href.previous %}{{ pagination.href.previous }}{% else %}#{% endif %}">«</a>
