@@ -2,18 +2,15 @@
 title: About
 layout: page
 permalink: /about/
-summary: Blogger, freethinker, visual artist. Listed on various creative awards.
+summary: All About Bayu Angora
 ---
 
 <section class="box">
-<div class="title">
-<h2 class="center">Bayu Angora</h2>
-</div>
 <div class="content">
-<p class="center">Blogger, freethinker, visual artist. Listed on various creative awards.</p>
-<hr>
-<img class="profile" alt="Bayu Angora" src="https://id.imgix.net/profile/courtesy.webp">
 <h3 class="center">ᮘᮚᮥ ᮃᮍᮧᮛ</h3>
+<img class="profile" alt="Bayu Angora" src="https://angora.id/bayuangora.webp">
+<h2 class="center">Bayu Angora</h2>
+<h3 class="center">Artist | Coach | Writer</h3>
 </div>
 </section>
 
@@ -23,147 +20,181 @@ summary: Blogger, freethinker, visual artist. Listed on various creative awards.
 </div>
 <div class="content">
 <hr>
-<b>2009</b>
 <p>• Extension Course of Philosophy | Parahyangan University | Unpar</p>
 <hr>
-<b>2003</b>
 <p>• Arts and Design | Indonesian Institute of Arts and Culture | ISBI</p>
+<hr>
 </div>
 </section>
 
 <section class="box">
 <div class="title">
-<h4 class="center">= Awards =</h4>
+<h4 class="center">= Certification =</h4>
 </div>
 <div class="content">
 <hr>
-<b>2022</b>
-<p>• Nominator | Indonesia Website Awards</p>
+<p>• ICR | International Coaches Register | Professional Life Coach</p>
 <hr>
-<b>2018</b>  
-<p>• Nominator | The Best CSS Gallery</p>
+<p>• iGNLP | International Guild for NLP | Master NLP</p>
 <hr>
-<b>2017</b>  
-<p>• Penulis Favorit | Sabana Pustaka</p>
+<p>• iGHYP | International Guild for Hypnosis | Hypnosis</p>
 <hr>
-<b>2016</b>
-<p>• 250 Penyair Terbaik | Bebuku Publisher</p>
+<p>• Transformation Academy | NLP Life Coach</p>
 <hr>
-<b>2015</b>
-<p>• World Records Performer | Angklung for The World</p>
+<p>• Transformation Academy | Therapeutic Art</p>
 <hr>
-<b>2009</b>  
-<p>• Finalis Penulisan Artikel | DaunJati Awards</p>
+<p>• The Priority Academy | NLP Master</p>
+<hr>
+<p>• IBH | Certified Hypnotherapist</p>
+<hr>
+<p>• AHA | Hypnosis in History</p>
+<hr>
+<p>• YACEP | Meditation</p>
+<hr>
+<p>• Yogalap | Breath is Life</p>
+<hr>
+<p>• HP Life | Design Thinking</p>
+<hr>
+<p>• Eduonix | Web from Scratch</p>
+<hr>
+<p>• BitDegree | Learn Web Design</p>
+<hr>
+<p>• SEMrush | SEO Fundamentals</p>
+<hr>
+<p>• SoloLearn | CSS Fundamentals</p>
+<hr>
+<p>• SoloLearn | HTML Fundamentals</p>
+<hr>
+<p>• Coursera | History of Humankind</p>
+<hr>
+<p>• Coursera | Critical Thinking</p>
+<hr>
+<p>• Coursera | Philosophy</p>
+<hr>
 </div>
-</section>
-
-<section class="box">
-<div class="title">
-<h4 class="center">= Exhibition =</h4>
-</div>
-<div class="content">
-<hr>
-<b>2022</b>
-<p>• About Women | Studio 40 | South Wales | United Kingdom</p>
-<hr>
-<b>2019</b>
-<p>• About Women | Pilotti Chapel | Volvera | Italy</p>
-<hr>
-<b>2018</b>
-<p>• We Are Diversity | Gedok Kunstlerinnenforum | Karlsruhe | Germany</p>
-<hr>
-<b>2017</b>
-<p>• Salao Medplan de Humor | Teresina Shopping | Teresina | Brazil</p>
-<hr>
-<b>2016</b>
-<p>• Humour at Gura Humorului | Obiceiurilor Populare | Bucovina | Romania</p>
-<hr>
-<b>2015</b>
-<p>• Pameran Poster Perjuangan | Auditorium UKDW | Yogyakarta | Indonesia</p>
-<hr>
-<b>2014</b>
-<p>• LINKar Rupa | Galeri Merak | Semarang | Indonesia</p>
-<p>• About Women | Museo Interactivo de Historia | Lugo | Spain</p>
-<hr>
-<b>2013</b>
-<p>• Strangers in Paradise | Cultural de Hispanohablantes | Amsterdam | Netherlands</p>
-<hr>
-<b>2012</b>
-<p>• ACTs | Bentara Budaya Jakarta | Jakarta | Indonesia</p>
-<p>• Warning Planet | La Biennale de Montevideo | Uruguay</p>
-<hr>
-<b>2011</b>
-<p>• Hip-Huggers | TocaMe Bar | Club Street | Singapore</p>
-<p>• Uluslararasi Turizm Yarismasi | Anadolu Museum of Art | Istanbul | Turkey</p>
-<hr>
-<b>2010</b>
-<p>• HiGrapher – Graphic Art Festival | Jogja National Museum | Yogyakarta | Indonesia</p>
-<p>• Human Rights? | Fondazione Opera Campana dei Caduti | Trento | Italy</p>
-<p>• Q Festival – Top / Bottom | Galeri Cipta III | TIM | Jakarta | Indonesia</p>
-<hr>
-<b>2009</b>  
-<p>• Magic of Art | Benteng Vredeburg | Yogyakarta | Indonesia</p>
-<p>• Magic of Art | Dago Tea House | Bandung | Indonesia</p>
-<hr>
-<b>2008</b>  
-<p>• The Evolution of The Photogram | Dago Tea House | Bandung | Indonesia</p>
-<p>• The Evolution of The Photogram | FSMR Gallery | ISI | Yogyakarta | Indonesia</p>
-<p>• Jazz Fashion in Motion | Paris van Java | Bandung | Indonesia</p>
-<p>• 1001 Indie Smile | Senayan City | Jakarta | Indonesia</p>
-<hr>
-<b>2007</b>
-<p>• 1001 Cover Concept | Senayan City | Jakarta | Indonesia</p>
-<p>• ARCHI – Advertising Championship | PKM Gallery | UPI | Bandung | Indonesia</p>
-<hr>
-<b>2006</b>  
-<p>• Paradise and Spirit Within | Sunan Ambu Art Gallery | ISBI | Bandung | Indonesia</p>
-<p>• Comic Carnaval PDKT2 | GEMA Gallery | Trisakti University | Jakarta | Indonesia</p>
-<hr>
-<b>2005</b>  
-<p>• National Comic Exhibition | Sunan Ambu Art Gallery | ISBI | Bandung | Indonesia</p>
-<p>• Black & White Photography | Sunan Ambu Art Gallery | ISBI | Bandung | Indonesia</p>
-</div>
-</section>
-
-<section class="box">
-<h2 class="center" hidden>Bayu Angora</h2>
-<h3 class="center" hidden>Freethinker Indonesia</h3>
 <div class="gallery">
 <img class="big" tabindex="0"
-alt="Coursera - Introduction To Philosophy - Bayu Angora"
-src="https://id.imgix.net/certificate/coursera-introduction-to-philosophy.webp">
+alt="ICR | Professional Life Coach | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/icr-professional-life-coach.webp">
 <img class="half" tabindex="0"
-alt="Coursera - Critical Thinking - Bayu Angora"
-src="https://id.imgix.net/certificate/coursera-critical-thinking.webp">
+alt="iGNLP | NLP Master | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/ignlp-nlp-master.webp">
 <img class="half" tabindex="0"
-alt="Coursera - History Of Humankind - Bayu Angora"
-src="https://id.imgix.net/certificate/coursera-history-of-humankind.webp">
-<img class="half" tabindex="0"
-alt="FutureLearn - Digital Discovery 1 - Bayu Angora"
-src="https://id.imgix.net/certificate/futurelearn-digital-discovery-1.webp">
-<img class="half" tabindex="0"
-alt="FutureLearn - Digital Discovery 2 - Bayu Angora"
-src="https://id.imgix.net/certificate/futurelearn-digital-discovery-2.webp">
-<img class="half" tabindex="0"
-alt="BitDegree - Learn Web Design - Bayu Angora"
-src="https://id.imgix.net/certificate/bitdegree-learn-web-design.webp">
-<img class="half" tabindex="0"
-alt="SEMrush - SEO Fundamentals - Bayu Angora"
-src="https://id.imgix.net/certificate/semrush-seo-fundamentals.webp">
-<img class="half" tabindex="0"
-alt="SoloLearn - HTML Fundamentals - Bayu Angora"
-src="https://id.imgix.net/certificate/sololearn-html-fundamentals.webp">
-<img class="half" tabindex="0"
-alt="SoloLearn - CSS Fundamentals - Bayu Angora"
-src="https://id.imgix.net/certificate/sololearn-css-fundamentals.webp">
-<img class="half" tabindex="0"
-alt="Udemy - Great Writing - Bayu Angora"
-src="https://id.imgix.net/certificate/udemy-great-writing.webp">
-<img class="half" tabindex="0"
-alt="Udemy - Social Psychology - Bayu Angora"
-src="https://id.imgix.net/certificate/udemy-social-psychology.webp">
+alt="iGHYP | Hypnosis Master | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/ighyp-hypnosis-master.webp">
 <img class="big" tabindex="0"
-alt="Udemy - Get Things Finished - Bayu Angora"
-src="https://id.imgix.net/certificate/udemy-get-things-finished.webp">
+alt="The Priority Academy | NLP Master | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/priority-academy-nlp-master.webp">
+<img class="half" tabindex="0"
+alt="Transformation | NLP Life Coach | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/transformation-nlp-life-coach.webp">
+<img class="half" tabindex="0"
+alt="Transformation | Therapeutic Art | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/transformation-therapeutic-art.webp">
+<img class="big" tabindex="0"
+alt="AHA | Hypnosis in History | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/aha-hypnosis-in-history.webp">
+<img class="half" tabindex="0"
+alt="Yogalap | Awakening | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/yogalap-awakening.webp">
+<img class="half" tabindex="0"
+alt="Yogalap | Breath is Life | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/yogalap-breathwork.webp">
+<img class="big" tabindex="0"
+alt="Yoga Alliance | Meditation | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/yoga-alliance-meditation.webp">
+<img class="half" tabindex="0"
+alt="SEMrush | SEO Fundamentals | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/semrush-seo-fundamentals.webp">
+<img class="half" tabindex="0"
+alt="BitDegree | Learn Web Design | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/bitdegree-learn-web-design.webp">
+<img class="big" tabindex="0"
+alt="Eduonix | Web Developer | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/eduonix-web-developer.webp">
+<img class="half" tabindex="0"
+alt="SoloLearn | HTML Fundamentals | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/sololearn-html-fundamentals.webp">
+<img class="half" tabindex="0"
+alt="SoloLearn | CSS Fundamentals | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/sololearn-css-fundamentals.webp">
+<img class="big" tabindex="0"
+alt="HP Life | Design Thinking | Bayu Angora"
+src="https://ik.imagekit.io/angora/certificate/hp-life-design-thinking.webp">
+</div>
+</section>
+
+<section class="box">
+<div class="title">
+<h4 class="center">= Art Exhibition =</h4>
+</div>
+<div class="content">
+<hr>
+<p>• About Women | Studio 40 | South Wales | United Kingdom</p>
+<hr>
+<p>• About Women | Pilotti Chapel | Volvera | Italy</p>
+<hr>
+<p>• We Are Diversity | Gedok Kunstlerinnenforum | Karlsruhe | Germany</p>
+<hr>
+<p>• Salao Medplan de Humor | Teresina Shopping | Teresina | Brazil</p>
+<hr>
+<p>• Humour at Gura Humorului | Bucovina Cultural Centre | Romania</p>
+<hr>
+<p>• About Women | Museo Interactivo de Historia | Lugo | Spain</p>
+<hr>
+<p>• Strangers in Paradise | Cultural de Hispanohablantes | Amsterdam | Netherlands</p>
+<hr>
+<p>• Warning Planet | La Biennale de Montevideo | Uruguay</p>
+<hr>
+<p>• Uluslararasi Turizm Yarismasi | Anadolu Museum of Art | Istanbul | Turkey</p>
+<hr>
+<p>• Hip-Huggers | TocaMe Bar | Club Street | Singapore</p>
+<hr>
+<p>• Human Rights? | Fondazione Opera Campana dei Caduti | Trento | Italy</p>
+<hr>
+<p>• HiGrapher – Graphic Art Festival | Jogja National Museum | Yogyakarta | Indonesia</p>
+<hr>
+<p>• Q Festival – Top / Bottom | Galeri Cipta III | TIM | Jakarta | Indonesia</p>
+<hr>
+<p>• Magic of Art | Benteng Vredeburg | Yogyakarta | Indonesia</p>
+<hr>
+<p>• Magic of Art | Dago Tea House | Bandung | Indonesia</p>
+<hr>
+<p>• Jazz Fashion in Motion | Paris van Java | Bandung | Indonesia</p>
+<hr>
+<p>• 1001 Indie Smile | Senayan City | Jakarta | Indonesia</p>
+<hr>
+<p>• 1001 Cover Concept | Senayan City | Jakarta | Indonesia</p>
+<hr>
+<p>• Comic Carnaval | GEMA Gallery | Trisakti University | Jakarta | Indonesia</p>
+<hr>
+<p>• Pekan Komik Nasional | Sunan Ambu Art Gallery | ISBI | Bandung | Indonesia</p>
+<hr>
+</div>
+<div class="gallery">
+<img class="big" tabindex="0"
+alt="Human Rights | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/human-rights-01.webp">
+<img class="big" tabindex="0"
+alt="Human Rights | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/human-rights-00.webp">
+<img class="half" tabindex="0"
+alt="About Women | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/about-women-02.webp">
+<img class="half" tabindex="0"
+alt="About Women | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/about-women-05.webp">
+<img class="half" tabindex="0"
+alt="About Women | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/about-women-04.webp">
+<img class="half" tabindex="0"
+alt="About Women | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/about-women-03.webp">
+<img class="big" tabindex="0"
+alt="Gura Humorului | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/gura-humorului.webp">
+<img class="big" tabindex="0"
+alt="MultiTalenan | Bayu Angora"
+src="https://ik.imagekit.io/angora/event/multitalenan.webp">
 </div>
 </section>
