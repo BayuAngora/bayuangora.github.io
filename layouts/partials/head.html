@@ -4,21 +4,21 @@
 <meta name="view-transition" content="same-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{% if isHome %}{{ title }}{% else %}{{ title }} | {{ site.title }}{% end %}</title>
+<title>{{ if isHome }}{{ title }}{{ else }}{{ title }} | {{ site.title }}{{ end }}</title>
 <meta name="keywords" content="{{ title }}">
 <meta name="description" content="
 {{ summary }}
 ">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{% if isHome %}{{ title }}{% else %}{{ title }} | {{ site.title }}{% end %}">
+<meta name="twitter:title" content="{{ if isHome }}{{ title }}{{ else }}{{ title }} | {{ site.title }}{{ end }}">
 <meta name="twitter:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta name="twitter:description" content="
 {{ summary }}
 ">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if isHome %}{{ title }}{% else %}{{ title }} | {{ site.title }}{% end %}">
+<meta property="og:title" content="{{ if isHome }}{{ title }}{{ else }}{{ title }} | {{ site.title }}{{ end }}">
 <meta property="og:url" content="{{ site.baseurl }}{{ title | slug }}/">
 <meta property="og:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta property="og:description" content="
@@ -40,8 +40,8 @@
 <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}favicon.svg">
 <link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
 <link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
-<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}{% if isHome %}start.css{% else %}style.css{% end %}">
-{% if isHome %}
+<link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}{{ if isHome }}start.css{{ else }}style.css{{ end }}">
+{{ if isHome }}
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -52,7 +52,7 @@
 "description": "{{ summary }}"
 }
 </script>
-{% else %}
+{{ else }}
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -66,5 +66,5 @@
   }
 }
 </script>
-{% end %}
+{{ end }}
 </head>
