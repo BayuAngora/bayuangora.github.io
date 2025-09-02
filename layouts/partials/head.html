@@ -41,30 +41,18 @@
 <link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
 <link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
 <link rel="stylesheet" type="text/css" media="all" href="{% if site.baseurl %}{{ site.baseurl }}start.css{% else %}{{ site.baseurl }}style.css{% endif %}">
-{% if site.baseurl %}
+
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
-"@type": "WebSite",
-"name": "{{ site.title }}",
-"url": "{{ site.baseurl }}",
-"image": "{{ site.baseurl }}bayuangora.webp",
-"description": "{{ summary }}"
-}
-</script>
-{% else %}
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "Article",
-"headline": "{{ title }} | {{ site.title }}",
-"image": "{{ site.baseurl }}bayuangora.webp",
-"author": {
+"@type": "ProfilePage",
+"mainEntity": {
   "@type": "Person",
   "name": "{{ site.title }}",
-  "url": "{{ site.baseurl }}"
+  "url": "{{ site.baseurl }}",
+  "image": "{{ site.baseurl }}bayuangora.webp",
+  "description": "{{ summary }}"
   }
 }
 </script>
-{% endif %}
 </head>
