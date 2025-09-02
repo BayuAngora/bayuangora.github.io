@@ -4,25 +4,25 @@
 <meta name="view-transition" content="same-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{% if site.baseurl %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
-<meta name="keywords" content="{% if site.baseurl %}{{ site.title }}{% else %}{{ title }}{% endif %}">
+<title>{% if isHomePage %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
+<meta name="keywords" content="{% if isHomePage %}{{ site.title }}{% else %}{{ title }}{% endif %}">
 <meta name="description" content="
-{% if site.baseurl %}{{ site.description }}{% else %}{{ summary }}{% endif %}
+{% if isHomePage %}{{ site.description }}{% else %}{{ summary }}{% endif %}
 ">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{% if site.baseurl %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+<meta name="twitter:title" content="{% if isHomePage %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
 <meta name="twitter:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta name="twitter:description" content="
-{% if site.baseurl %}{{ site.description }}{% else %}{{ summary }}{% endif %}
+{% if isHomePage %}{{ site.description }}{% else %}{{ summary }}{% endif %}
 ">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if site.baseurl %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-<meta property="og:url" content="{% if site.baseurl %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
+<meta property="og:title" content="{% if isHomePage %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+<meta property="og:url" content="{% if isHomePage %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
 <meta property="og:image" content="{{ site.baseurl }}bayuangora.webp">
 <meta property="og:description" content="
-{% if site.baseurl %}{{ site.description }}{% else %}{{ summary }}{% endif %}
+{% if isHomePage %}{{ site.description }}{% else %}{{ summary }}{% endif %}
 ">
 
 <meta name="theme-color" content="#000">
@@ -34,13 +34,13 @@
 <meta name="msapplication-starturl" content="{{ site.baseurl }}">
 <meta name="image" content="{{ site.baseurl }}bayuangora.webp">
 
-<link rel="canonical" href="{% if site.baseurl %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
+<link rel="canonical" href="{% if isHomePage %}{{ site.baseurl }}{% else %}{{ page.url }}{% endif %}">
 <link rel="manifest" href="{{ site.baseurl }}manifest.json">
 <link rel="icon" type="image/png" href="{{ site.baseurl }}favicon.png">
 <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}favicon.svg">
 <link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
 <link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
-<link rel="stylesheet" type="text/css" media="all" href="{% if site.baseurl %}{{ site.baseurl }}start.css{% else %}{{ site.baseurl }}style.css{% endif %}">
+<link rel="stylesheet" type="text/css" media="all" href="{% if isHomePage %}{{ site.baseurl }}start.css{% else %}{{ site.baseurl }}style.css{% endif %}">
 
 <script type="application/ld+json">
 {
