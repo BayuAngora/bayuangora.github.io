@@ -1,7 +1,8 @@
 {
   "title": "Bayu Angora",
+  "description": "Artist | Coach | Writer",
   "baseurl": "https://bayuangora.github.io/",
-  "lang": "id",
+  "lang": "en",
   "menu1": "art",
   "menu2": "blog",
   "menu3": "quote",
@@ -9,6 +10,5 @@
   "facebook": "https://fb.com/BayuAngora",
   "twitter": "https://twitter.com/BayuAngora",
   "instagram": "https://instagram.com/BayuAngora",
-  "copyright": "All Rights Reserved © PT Bayu Angora Space",
-  "description": "Artist | Coach | Writer"
+  "copyright": "© PT Bayu Angora Space | All Rights Reserved"
 }
