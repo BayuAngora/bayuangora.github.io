@@ -18,7 +18,7 @@ return {
     includes: "layouts/partials"
   },
   passthroughFileCopy: true,
-  htmlTemplateEngine: "liquid",
+  htmlTemplateEngine: "nunjucks",
   templateFormats: ["html", "md"]
   };
 };
