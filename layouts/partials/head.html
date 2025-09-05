@@ -40,7 +40,7 @@
 <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}favicon.svg">
 <link rel="apple-touch-icon" href="{{ site.baseurl }}favicon.png">
 <link rel="mask-icon" color="#000" href="{{ site.baseurl }}favicon.svg">
-<link rel="stylesheet" type="text/css" media="all" href="{% if page.url %}{{ site.baseurl }}start.css{% else %}{{ site.baseurl }}style.css{% endif %}">
+<link rel="stylesheet" type="text/css" media="all" href="{% if page.url == "/" %}{{ site.baseurl }}start.css{% else %}{{ site.baseurl }}style.css{% endif %}">
 
 <script type="application/ld+json">
 {
