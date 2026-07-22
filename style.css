@@ -1,0 +1,292 @@
+html {
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+-webkit-tap-highlight-color: transparent;
+}
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 50rem;
+line-height: 1.25;
+margin: auto;
+background: #000;
+background-color: #000;
+}
+main {
+padding: 1rem 1.5rem;
+animation: fadeUp 1s;
+}
+::selection {
+color: #e00;
+background: transparent;
+}
+* {
+color: #000;
+user-select: none;
+text-decoration: none;
+outline: 1px solid transparent;
+font-family: "font", sans-serif;
+transition: 1s, fill 1s;
+}
+h1, h2, h3, h4, h5, h6, p, b {
+margin: 0 auto .5rem;
+animation: fadeIn 1s;
+}
+h1 {
+margin: -.5rem auto .1rem;
+font-size: 1.5rem;
+}
+h2 {
+font-size: 1.25rem;
+}
+h3, h4, h5, h6, p, a {
+font-size: 1rem;
+}
+hr {
+margin: 1rem auto .75rem;
+border: .05rem solid #888;
+}
+img {
+width: 100%;
+margin: .25rem auto 0;
+border-radius: .25rem;
+animation: fadeIn 1s;
+}
+header, footer, input,
+.center, .button, .search {
+text-align: center;
+}
+.justify {
+margin: 0 auto .5rem;
+text-align: justify;
+}
+.icon {
+width: 3rem;
+fill: #fff;
+}
+.menu, .menu a {
+margin: 1.25rem .5rem -.5rem;
+}
+.box, .button, .search, .paginator a {
+border: .1rem solid transparent;
+border-radius: .5rem;
+box-sizing: border-box;
+background: #fff;
+background-color: #fff;
+}
+.box {
+margin: 0 auto 1rem;
+padding: 1rem 1.5rem;
+}
+.button {
+margin: 1rem auto .5rem;
+color: #fff;
+background: #000;
+background-color: #000;
+}
+.button, .search {
+width: 100%;
+padding: .7rem 0 1.2rem;
+font-size: 1.25rem;
+}
+.paginator {
+display: flex;
+margin: 1rem auto;
+}
+.paginator a {
+padding: 0 1.1rem .7rem;
+font-size: 2.25rem;
+font-weight: 700;
+}
+.favicon, .favicon img {
+margin: 0 auto;
+}
+.favicon img {
+width: 3.25rem;
+animation: heart 1.5s infinite;
+}
+.favicon img:hover {
+animation: heart .75s infinite;
+}
+.gallery {
+margin: 0 -.75rem -.25rem;
+text-align: center;
+}
+.gallery img {
+margin: 0 auto;
+}
+.gallery img:focus {
+width: 98%;
+}
+.big { width: 98%; }
+.half { width: 48.5%; }
+.small { width: 32%; }
+.share, .share a {
+width: 1.5rem;
+margin: -1.75rem 0 0 auto;
+fill: #000;
+}
+.source, .source a {
+margin: -1.25rem .5rem .25rem;
+}
+.copyright, .copyright a {
+max-height: 100%;
+margin: 0 auto 1.25rem;
+color: #fff;
+font-size: .75rem;
+}
+* a:hover, a *:hover,
+.mode * a:hover, .mode a *:hover {
+fill: #e00;
+color: #e00;
+}
+.mode {
+background: #fff;
+background-color: #fff;
+}
+.mode * {
+color: #fff;
+}
+.mode hr {
+border: .05rem solid #888;
+}
+.mode .icon {
+fill: #000;
+}
+.mode .box, .mode .search,
+.mode .paginator a {
+background: #000;
+background-color: #000;
+}
+.mode .button, .mode .button a {
+color: #000;
+background: #fff;
+background-color: #fff;
+}
+.mode .share, .mode .share a {
+fill: #fff;
+}
+.mode .copyright, .mode .copyright a {
+color: #000;
+}
+@font-face {
+font-display: swap;
+font-family: "font";
+src: url("https://angora.sirv.com/font/basic.woff2");
+}
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+@keyframes fadeUp {
+from { opacity: 0; transform: translate3d(0,.5rem,0); }
+to { opacity: 1; transform: translate3d(0,0,0); }
+}
+@keyframes gradient {
+50% { background-color: #123; }
+0%, 100% { background-color: #400; }
+}
+@keyframes heart {
+0% { transform: scale(1); }
+20% { transform: scale(1.05); }
+40% { transform: scale(1.02); }
+50% { transform: scale(1.10); }
+100% { transform: scale(1); }
+}
+.motion li {
+position: fixed;
+display: block;
+top: 0%;
+z-index: -1;
+width: .15rem;
+background: rgba(250,250,250,.75);
+animation: animate 10s linear infinite;
+}
+.motion li:nth-child(1)
+{ left: 0%; height: 8rem; animation-duration: 20s; }
+.motion li:nth-child(2)
+{ left: 15%; height: 4rem; animation-duration: 12s; }
+.motion li:nth-child(3)
+{ left: 30%; height: 6rem; animation-duration: 16s; }
+.motion li:nth-child(4)
+{ left: 45%; height: 2rem; animation-duration: 8s; }
+.motion li:nth-child(5)
+{ right: 0%; height: 2rem; animation-duration: 6s; }
+.motion li:nth-child(6)
+{ right: 15%; height: 8rem; animation-duration: 18s; }
+.motion li:nth-child(7)
+{ right: 30%; height: 4rem; animation-duration: 10s; }
+.motion li:nth-child(8)
+{ right: 45%; height: 6rem; animation-duration: 14s; }
+@keyframes animate {
+0% { transform: rotate(150deg) translateY(0);
+opacity: .5; border-radius: 50%; }
+100% { transform: rotate(150deg) translateY(-100rem);
+opacity: 0; border-radius: 50%; }
+}
+
+body {
+background: linear-gradient(150deg, #400 0%, #123 100%);
+background-color: #300;
+}
+::selection {
+color: #e00;
+background: transparent;
+}
+* {
+color: #300;
+}
+hr {
+border: .05rem solid #888;
+}
+.icon {
+width: 3rem;
+fill: #eef;
+}
+.box, .button, .search, .paginator a {
+background: #eef;
+background-color: #eef;
+}
+.button {
+color: #eef;
+background: #300;
+background-color: #300;
+}
+.copyright, .copyright a {
+color: #eef;
+}
+* a:hover, a *:hover,
+.mode * a:hover, .mode a *:hover {
+fill: #e00;
+color: #e00;
+}
+.mode {
+background: linear-gradient(150deg, #fcc 0%, #ddf 100%);
+background-color: #eef;
+}
+.mode * {
+color: #eef;
+}
+.mode hr {
+border: .05rem solid #888;
+}
+.mode .icon {
+fill: #300;
+}
+.mode .box, .mode .search,
+.mode .paginator a {
+background: #300;
+background-color: #300;
+}
+.mode .button, .mode .button a {
+color: #300;
+background: #eef;
+background-color: #eef;
+}
+.mode .share, .mode .share a {
+fill: #eef;
+}
+.mode .copyright, .mode .copyright a {
+color: #300;
+}
