@@ -1,5 +1,5 @@
 if ("serviceWorker" in navigator){
-navigator.serviceWorker.register("/service.js");}
+navigator.serviceWorker.register("/script.js");}
 navigator.serviceWorker.ready.then(function(registration){
 registration.sync.register("sync").then(function(){},
 function(){});});
