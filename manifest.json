@@ -1,0 +1,45 @@
+{
+  "id": "Bayu Angora",
+  "name": "Bayu Angora",
+  "short_name": "Bayu Angora",
+  "description": "★★★★★",
+  "lang": "id",
+  "dir": "auto",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "any",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "display": "standalone",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "icons": [
+    {
+      "src": "/bayuangora.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/bayuangora.webp",
+      "sizes": "512x512",
+      "type": "image/svg",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/bayuangora.webp",
+      "type": "image/webp",
+      "sizes": "1280x1280",
+      "form-factor": "wide"
+    },
+        {
+      "src": "/bayuangora.webp",
+      "type": "image/webp",
+      "sizes": "1280x1280",
+      "form-factor": "narrow"
+    }
+  ]
+}
