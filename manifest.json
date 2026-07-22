@@ -22,14 +22,14 @@
   },
   "icons": [
     {
-      "src": "/bayuangora.webp",
-      "type": "image/webp",
+      "src": "/favicon.png",
+      "type": "image/png",
       "sizes": "512x512",
       "purpose": "any"
     },
     {
-      "src": "/bayuangora.webp",
-      "type": "image/webp",
+      "src": "/favicon.png",
+      "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     }
