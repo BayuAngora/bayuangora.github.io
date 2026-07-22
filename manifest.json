@@ -11,6 +11,12 @@
   "theme_color": "#000",
   "background_color": "#000",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "lifestyle"
+  ],
   "launch_handler": {
     "client_mode": "auto"
   },
