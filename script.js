@@ -10,6 +10,12 @@ if (navigator.share) { navigator.share({
 title: "Bayu Angora", url: "" }).then(() => {
 console.log("Thanks");}) .catch(console.error);}});
 
+const periodicSyncPermission = await navigator.permissions.query({
+name: "periodic-background-sync",});
+if (periodicSyncPermission.state == "granted"){
+await registration.periodicSync.register("fetch-new-content",{
+minInterval: 24 * 60 * 60 * 1000});} 
+
 function setMode(e){
 var t=document.getElementById("dark"),d=document.getElementById("light");e?(d.style.display="block",t.style.display="none",
 localStorage.setItem("preferredTheme","dark")):(d.style.display="none",t.style.display="block",
