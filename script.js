@@ -40,13 +40,10 @@ localStorage.setItem("preferredTheme", "dark");
 } else {
 if (lightBtn) lightBtn.style.display = "none";
 if (darkBtn) darkBtn.style.display = "block";
-localStorage.removeItem("preferredTheme");
-}
-document.body.classList.toggle("mode", isDark);
-}
+localStorage.removeItem("preferredTheme");}
+document.body.classList.toggle("mode", isDark);}
 if (localStorage.getItem("preferredTheme") === "dark") {
-setMode(true);
-}
+setMode(true);}
 if (darkBtn) {
 darkBtn.addEventListener("click", function () {
 setMode(true);
@@ -54,4 +51,4 @@ setMode(true);
 if (lightBtn) {
 lightBtn.addEventListener("click", function () {
 setMode(false);
-});}});  
+});}});
