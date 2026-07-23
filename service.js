@@ -49,7 +49,7 @@ try {
 if ("sync" in self.registration) {
 await self.registration.sync.register("sync");}} 
 catch (error) {
-console.warn("Background Sync is Disabled", error);}}
+console.warn("Background sync is disabled", error);}}
 self.addEventListener("periodicsync", (event) => {
 if (event.tag === "fetch-new-content") {
 event.waitUntil(fetchNewContent());
