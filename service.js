@@ -8,12 +8,10 @@ content: "content-v" + CACHE_VERSION,
 function createCacheBustedRequest(url) {
 let request = new Request(url, { cache: "reload" });
 if ("cache" in request) {
-return request;
-}
+return request;}
 let bustedUrl = new URL(url, self.location.href);
 bustedUrl.search += (bustedUrl.search ? "&" : "") + "cachebust=" + Date.now();
-return new Request(bustedUrl);
-}
+return new Request(bustedUrl);}
 self.addEventListener("install", (event) => {
 event.waitUntil(
 fetch(createCacheBustedRequest(OFFLINE_URL)).then(function (response) {
@@ -42,18 +40,16 @@ console.log("Fetch failed; returning offline page instead.", error);
 return caches.match(OFFLINE_URL);
 }));}});
 self.addEventListener("sync", (event) => {
-if (event.tag === "sync") {event.waitUntil(syncContent());} 
-else if (event.tag === "database-sync") {
+if (event.tag === "sync") {event.waitUntil(syncContent());
+} else if (event.tag === "database-sync") {
 event.waitUntil(pushLocalDataToDatabase());
 }});
 async function requestSync() {
 try {
 if ("sync" in self.registration) {
-await self.registration.sync.register("sync");
-}} 
+await self.registration.sync.register("sync");}} 
 catch (error) {
-console.warn("Background Sync is Disabled", error);
-}}
+console.warn("Background Sync is Disabled", error);}}
 self.addEventListener("periodicsync", (event) => {
 if (event.tag === "fetch-new-content") {
 event.waitUntil(fetchNewContent());
@@ -67,8 +63,7 @@ icon: "favicon.png",
 self.addEventListener("notificationclick", (event) => {
 event.notification.close();
 var fullPath = self.location.origin + event.notification.data.path;
-clients.openWindow(fullPath);
-});
+clients.openWindow(fullPath);});
 async function syncContent() {
 console.log("Syncing content...");}
 async function pushLocalDataToDatabase() {
