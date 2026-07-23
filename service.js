@@ -13,5 +13,3 @@ self.addEventListener("fetch", event => {if (event.request.mode === "navigate" |
 self.addEventListener("sync", event => {if (event.tag === "sync"){event.waitUntil(syncContent());}});async function requestSync(){await self.registration.sync.register("sync");}
 self.addEventListener("sync", event => {if (event.tag === "database-sync"){event.waitUntil(pushLocalDataToDatabase(););}});
 self.addEventListener("periodicsync", event => {if (event.tag === "fetch-new-content"){event.waitUntil(fetchNewContent(););}});
-self.addEventListener("push", (event) => {event.waitUntil(self.registration.showNotification("Notification Title", {body: "Notification Body Text", icon: "custom-notification-icon.png",}););});
-self.addEventListener("notificationclick", (event) => {event.notification.close(); var fullPath = self.location.origin + event.notification.data.path; clients.openWindow(fullPath);});
