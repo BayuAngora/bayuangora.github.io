@@ -12,4 +12,5 @@ self.addEventListener("activate", event => {let expectedCacheNames = Object.keys
 self.addEventListener("fetch", event => {if (event.request.mode === "navigate" || (event.request.method === "GET" &&event.request.headers.get("accept").includes("text/html"))){console.log("Handling fetch event for", event.request.url);event.respondWith(fetch(event.request).catch(error => {console.log("Fetch failed; returning offline page instead.", error);return caches.match(OFFLINE_URL);}));}});
 self.addEventListener("sync", event => {if (event.tag === "sync"){event.waitUntil(syncContent());}});async function requestSync(){await self.registration.sync.register("sync");}
 
-self.addEventListener('sync', event => {if (event.tag === 'database-sync'){event.waitUntil(pushLocalDataToDatabase(););}});
+self.addEventListener("sync", event => {if (event.tag === "database-sync"){event.waitUntil(pushLocalDataToDatabase(););}});
+self.addEventListener("periodicsync", event => {if (event.tag === "fetch-new-content"){event.waitUntil(fetchNewContent(););}});
