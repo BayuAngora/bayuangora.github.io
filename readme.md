@@ -25,4 +25,4 @@
 
 <hr>
 
-<a href="https://trustedsite.com/verify?host=angora.id"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrsutedSite"></a>
+<a href="https://trustedsite.com/verify?host=angora.id"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrustedSite"></a>
