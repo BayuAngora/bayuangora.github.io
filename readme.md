@@ -172,7 +172,7 @@ https://mega.io/?aff=LD9hG90b8HY)
 
 ### Website Optimize  
 [https://app.wattspeed.com](https://app.wattspeed.com)  
-[https://catchpoint.com/webpagetest](https://www.catchpoint.com/webpagetest)  
+[https://catchpoint.com](https://catchpoint.com/webpagetest)  
 [https://debugbear.com](https://debugbear.com/tools)  
 [https://giftofspeed.com](https://giftofspeed.com)  
 [https://gtmetrix.com](https://gtmetrix.com)  
