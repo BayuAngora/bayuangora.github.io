@@ -162,8 +162,8 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Website Monitor  
-[https://angora.betteruptime.com](https://angora.betteruptime.com)  
-[https://angora.instatus.com](https://angora.instatus.com)  
+[https://betteruptime.com](https://angora.betteruptime.com)  
+[https://instatus.com](https://angora.instatus.com)  
 [https://pagescreen.io](https://pagescreen.io)  
 [https://uptime.com](https://uptime.com)  
 [https://uptrends.com](https://uptrends.com/tools)  
