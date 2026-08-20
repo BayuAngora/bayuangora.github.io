@@ -26,11 +26,11 @@
 <hr>
 
 ### About Link  
-[https://angora.bio.link](https://angora.bio.link)  
-[https://angora.hashnode.dev](https://angora.hashnode.dev)  
-[https://angora.postach.io](https://angora.postach.io)  
-[https://angora.substack.com](https://angora.substack.com)  
-[https://angora.w3spaces.com](https://angora.w3spaces.com)  
+[https://angora.bio.link](https://angora.bio.link){:target="_blank"}  
+[https://angora.hashnode.dev](https://angora.hashnode.dev){:target="_blank"}  
+[https://angora.postach.io](https://angora.postach.io){:target="_blank"}  
+[https://angora.substack.com](https://angora.substack.com){:target="_blank"}  
+[https://angora.w3spaces.com](https://angora.w3spaces.com){:target="_blank"}  
 
 <hr>
 
