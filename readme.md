@@ -168,6 +168,7 @@ https://mega.io/?aff=LD9hG90b8HY)
 [https://pagescreen.io](https://pagescreen.io)  
 [https://uptime.com](https://uptime.com)  
 [https://uptrends.com](https://uptrends.com/tools)  
+[https://visualping.io](https://visualping.io)  
 
 <hr>
 
