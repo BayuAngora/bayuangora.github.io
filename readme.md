@@ -162,6 +162,7 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Website Monitor  
+[https://anycrawl.dev](https://anycrawl.dev)  
 [https://betteruptime.com](https://angora.betteruptime.com)  
 [https://instatus.com](https://angora.instatus.com)  
 [https://montastic.io](https://angora.montastic.io)  
