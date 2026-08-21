@@ -92,6 +92,7 @@
 <hr>
 
 ### File Storage  
+[https://box.com](https://box.com)  
 [https://files.fm](https://files.fm)  
 [https://mediafire.com](https://mediafire.com/?g774541)  
 [https://mega.io](
