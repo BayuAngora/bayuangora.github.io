@@ -21,7 +21,7 @@
 <a href="https://sitecheck.sucuri.net/results/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/sucuri-✓-success" alt="Sucuri"></a>
 <a href="https://upguard.com/instant-security-score/report?c=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/upguard-✓-success" alt="UpGuard"></a>
 <a href="https://app.wattspeed.com/snapshot?url=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/wattspeed-100-success" alt="WattSpeed"></a>
-<a href="https://angora.instatus.com" target="_blank" rel="noopener"><img src="https://img.shields.io/website?url=https://angora.id" alt="Website Status"></a>
+<a href="https://angora.hyperping.app" target="_blank" rel="noopener"><img src="https://img.shields.io/website?url=https://angora.id" alt="Website Status"></a>
 
 <hr>
 
@@ -232,4 +232,4 @@ https://fonts.googleapis.com/css2?family=Google+Fonts:wght@400;700&text=12345678
 
 <hr>
 
-<a href="https://trustedsite.com/verify?host=angora.id"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrustedSite"></a>
+<a href="https://trustedsite.com/verify?host=angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrustedSite"></a>
