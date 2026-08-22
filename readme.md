@@ -2,7 +2,7 @@
 
 <hr>
 
-<a href="https://pagespeed.web.dev/report?url=https://angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/pagespeed.svg" alt="PageSpeed"></a>
+<a href="https://pagespeed.web.dev/report?url=https://angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/pagespeed.svg" alt="PageSpeed" width="100%"></a>
 
 <a href="https://accessibe.com/accessscan?website=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/accessibe-✓-success" alt="AccessiBe"></a>
 <a href="https://digitalbeacon.co/report/angora-id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/beacon-A+-success" alt="Beacon"></a>
@@ -232,4 +232,4 @@ https://fonts.googleapis.com/css2?family=Google+Fonts:wght@400;700&text=12345678
 
 <hr>
 
-<a href="https://trustedsite.com/verify?host=angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrustedSite"></a>
+<a href="https://trustedsite.com/verify?host=angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/trustedsite.svg" alt="TrustedSite" width="100%"></a>
