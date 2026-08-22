@@ -1,4 +1,4 @@
-<a href="https://angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/bayuangora.webp" alt="Bayu Angora"></a>
+<a href="https://angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/bayuangora.webp" alt="Bayu Angora" width="100%"></a>
 
 <hr>
 
