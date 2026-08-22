@@ -26,6 +26,7 @@
 <hr>
 
 ### About Link  
+[https://angora.bearblog.dev](https://angora.bearblog.dev)  
 [https://angora.bio.link](https://angora.bio.link)  
 [https://angora.boomurl.me](https://angora.boomurl.me)  
 [https://angora.hashnode.dev](https://angora.hashnode.dev)  
