@@ -25,6 +25,14 @@
 
 <hr>
 
+### App Platform  
+[https://angora.netlify.app](https://angora.netlify.app)  
+[https://angora.pages.dev](https://angora.pages.dev)  
+[https://angora.vercel.app](https://angora.vercel.app)  
+[https://angora.wasmer.app](https://angora.wasmer.app)  
+
+<hr>
+
 ### Blog Platform  
 [https://angora.bearblog.dev](https://angora.bearblog.dev)  
 [https://angora.boomurl.me](https://angora.boomurl.me)  
@@ -34,14 +42,6 @@
 [https://angora.substack.com](https://angora.substack.com)  
 [https://angora.tilda.ws](https://angora.tilda.ws)  
 [https://angora.w3spaces.com](https://angora.w3spaces.com)  
-
-<hr>
-
-### Build Hosting  
-[https://angora.netlify.app](https://angora.netlify.app)  
-[https://angora.pages.dev](https://angora.pages.dev)  
-[https://angora.vercel.app](https://angora.vercel.app)  
-[https://angora.wasmer.app](https://angora.wasmer.app)  
 
 <hr>
 
@@ -134,11 +134,11 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Image Source  
-[https://freepik.com](https://freepik.com)  
 [https://iconscout.com](https://iconscout.com)  
 [https://logowik.com](https://logowik.com)  
 [https://loremflickr.com
 ](https://loremflickr.com)  
+[https://magnific.com](https://magnific.com)  
 [https://picsum.photos
 ](https://picsum.photos)  
 [https://stockcake.com](https://stockcake.com)  
