@@ -4,7 +4,7 @@
 
 <a href="https://pagespeed.web.dev/report?url=https://angora.id" target="_blank" rel="noopener"><img src="https://angora.my.id/image/pagespeed.svg" alt="PageSpeed" width="100%"></a>
 
-<a href="https://accessibe.com/accessscan?website=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/accessibe-✓-success" alt="AccessiBe"></a>
+<a href="https://accessibe.com/accessscan?website=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/accessible-✓-success" alt="Accessible"></a>
 <a href="https://digitalbeacon.co/report/angora-id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/beacon-A+-success" alt="Beacon"></a>
 <a href="https://websitecarbon.com/website/angora-id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/carbon-A+-success" alt="Carbon"></a>
 <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/css-✓-success" alt="CSS"></a>
