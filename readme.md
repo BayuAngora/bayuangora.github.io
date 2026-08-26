@@ -168,6 +168,7 @@ https://mega.io/?aff=LD9hG90b8HY)
 [https://seoreviewtools.com](https://seoreviewtools.com)  
 [https://seositecheckup.com](https://seositecheckup.com/seo-audit/angora.id)  
 [https://seranking.com](https://seranking.com/domain-trust-checker.html)  
+[https://web-check.xyz](https://web-check.xyz/check/angora.id)  
 
 <hr>
 
