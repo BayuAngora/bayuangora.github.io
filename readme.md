@@ -14,6 +14,7 @@
 <a href="https://immuniweb.com/cyberscore/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/immuniweb-A+-success" alt="ImmuniWeb"></a>
 <a href="https://developer.mozilla.org/en-US/observatory/analyze?host=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/mozilla-A+-success" alt="Mozilla"></a>
 <a href="https://pwabuilder.com/reportcard?site=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/pwa-✓-success" alt="PWA"></a>
+<a href="https://radar.cloudflare.com/scan?url=https://angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/radar-✓-success" alt="Radar"></a>
 <a href="https://validator.schema.org/#url=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/schema-✓-success" alt="Schema"></a>
 <a href="https://securityheaders.com/?q=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/security-A+-success" alt="Security"></a>
 <a href="https://seositecheckup.com/seo-audit/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/seosite-✓-success" alt="SEO Site"></a>
