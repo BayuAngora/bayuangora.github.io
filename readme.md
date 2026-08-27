@@ -16,7 +16,7 @@
 <a href="https://pwabuilder.com/reportcard?site=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/pwa-✓-success" alt="PWA"></a>
 <a href="https://validator.schema.org/#url=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/schema-✓-success" alt="Schema"></a>
 <a href="https://securityheaders.com/?q=https://angora.id/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/security-A+-success" alt="Security"></a>
-<a href="https://seoptimer.com/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/seoptimer-✓-success" alt="SEOptimer"></a>
+<a href="https://seositecheckup.com/seo-audit/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/seosite-✓-success" alt="SEO Site"></a>
 <a href="https://ssllabs.com/ssltest/analyze.html?d=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/ssl-A+-success" alt="SSL Labs"></a>
 <a href="https://sitecheck.sucuri.net/results/angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/sucuri-✓-success" alt="Sucuri"></a>
 <a href="https://upguard.com/instant-security-score/report?c=angora.id" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/upguard-✓-success" alt="UpGuard"></a>
