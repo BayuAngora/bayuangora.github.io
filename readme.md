@@ -55,11 +55,13 @@
 [https://aconvert.com](https://aconvert.com)  
 [https://aspose.app](https://aspose.app)  
 [https://dang.ai](https://dang.ai)  
+[https://ezgif.com](https://ezgif.com)  
 [https://fonteditor.online](https://fonteditor.online)  
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
 [https://jotary.com](https://jotary.com)  
 [https://microlink.io](https://microlink.io/?q=angora.id)  
+[https://myegtool.com](https://myegtool.com)  
 [https://publer.com](https://publer.com)  
 [https://tinywow.com](https://tinywow.com)  
 [https://tools.pdf24.org](https://tools.pdf24.org)  
@@ -126,7 +128,6 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Image Editor  
-[https://ezgif.com](https://ezgif.com)  
 [https://freeconvert.com](https://freeconvert.com)  
 [https://online-convert.com](https://online-convert.com)  
 [https://picsvg.com](https://picsvg.com)  
