@@ -56,6 +56,7 @@
 [https://aspose.app](https://aspose.app)  
 [https://dang.ai](https://dang.ai)  
 [https://ezgif.com](https://ezgif.com)  
+[https://fileshot.io](https://fileshot.io)  
 [https://fonteditor.online](https://fonteditor.online)  
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
