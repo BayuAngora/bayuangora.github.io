@@ -57,7 +57,6 @@
 [https://bitrix24.com](https://bitrix24.com)  
 [https://dang.ai](https://dang.ai)  
 [https://ezgif.com](https://ezgif.com)  
-[https://fileshot.io](https://fileshot.io)  
 [https://fonteditor.online](https://fonteditor.online)  
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
@@ -108,6 +107,7 @@
 ### File Storage  
 [https://box.com](https://box.com)  
 [https://files.fm](https://files.fm)  
+[https://fileshot.io](https://fileshot.io)  
 [https://mediafire.com](https://mediafire.com/?g774541)  
 [https://mega.io](
 https://mega.io/?aff=LD9hG90b8HY)  
