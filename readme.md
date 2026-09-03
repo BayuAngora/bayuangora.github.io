@@ -90,7 +90,6 @@
 [https://pwabuilder.com](https://pwabuilder.com/reportcard?site=https://angora.id)  
 [https://rss.app](https://rss.app)  
 [https://site-shot.com](https://site-shot.com)  
-[https://stackbit.com](https://stackbit.com)  
 [https://stackblitz.com](https://stackblitz.com)  
 
 <hr>
