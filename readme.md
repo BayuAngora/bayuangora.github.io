@@ -61,6 +61,7 @@
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
 [https://jotary.com](https://jotary.com)  
+[https://kol.id](https://kol.id)  
 [https://microlink.io](https://microlink.io/?q=angora.id)  
 [https://myegtool.com](https://myegtool.com)  
 [https://publer.com](https://publer.com)  
