@@ -61,7 +61,6 @@
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
 [https://jotary.com](https://jotary.com)  
-[https://kol.id](https://kol.id)  
 [https://microlink.io](https://microlink.io/?q=angora.id)  
 [https://myegtool.com](https://myegtool.com)  
 [https://publer.com](https://publer.com)  
@@ -156,6 +155,7 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Social Media  
+[https://kol.id](https://kol.id)  
 [https://addmefast.com](https://addmefast.com)  
 [https://traffup.net](https://traffup.net)  
 
