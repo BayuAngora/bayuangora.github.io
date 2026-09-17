@@ -155,8 +155,8 @@ https://mega.io/?aff=LD9hG90b8HY)
 <hr>
 
 ### Social Media  
-[https://kol.id](https://kol.id)  
 [https://addmefast.com](https://addmefast.com)  
+[https://kol.id](https://kol.id)  
 [https://traffup.net](https://traffup.net)  
 
 <hr>
