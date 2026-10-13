@@ -58,6 +58,7 @@
 [https://dang.ai](https://dang.ai)  
 [https://ezgif.com](https://ezgif.com)  
 [https://fonteditor.online](https://fonteditor.online)  
+[https://getartcraft.com](https://getartcraft.com)  
 [https://hubspot.com](https://hubspot.com)  
 [https://ifttt.com](https://ifttt.com)  
 [https://jotary.com](https://jotary.com)  
