@@ -1,0 +1,214 @@
+/* PADAS engine: Latin text -> Aksara Nusantara (Unicode).
+   Table driven. Each script config describes consonants, vowels, marks and virama. */
+(function (root) {
+  'use strict';
+  var U = function () {
+    var out = '';
+    for (var i = 0; i < arguments.length; i++) out += String.fromCodePoint(arguments[i]);
+    return out;
+  };
+  var digits = function (base) {
+    var o = {};
+    for (var i = 0; i < 10; i++) o[String(i)] = String.fromCodePoint(base + i);
+    return o;
+  };
+  var SCRIPTS = {
+    jawa: {
+      label: 'Jawa', family: 'Noto Sans Javanese', sample: 'Sugeng rawuh',
+      cons: { k: U(0xA98F), g: U(0xA992), ng: U(0xA994), c: U(0xA995), j: U(0xA997), ny: U(0xA99A), t: U(0xA9A0), d: U(0xA9A2), n: U(0xA9A4), p: U(0xA9A5), b: U(0xA9A7), m: U(0xA9A9), y: U(0xA9AA), r: U(0xA9AB), l: U(0xA9AD), w: U(0xA9AE), s: U(0xA9B1), h: U(0xA9B2), th: U(0xA99B), dh: U(0xA99D) },
+      ind: { a: U(0xA984), i: U(0xA986), u: U(0xA988), 'é': U(0xA98C), o: U(0xA98E), e: U(0xA984, 0xA9BC) },
+      vs: { i: U(0xA9B6), u: U(0xA9B8), 'é': U(0xA9BA), o: U(0xA9BA, 0xA9B4), e: U(0xA9BC) },
+      coda: { ng: U(0xA981), r: U(0xA982), h: U(0xA983) },
+      medial: { y: U(0xA9BE), r: U(0xA9BF) }, medialRE: U(0xA9BD),
+      virama: U(0xA9C0), digits: digits(0xA9D0), punct: { ',': U(0xA9C8), '.': U(0xA9C9) }
+    },
+    sunda: {
+      label: 'Sunda', family: 'Noto Sans Sundanese', sample: 'Sampurasun',
+      cons: { k: U(0x1B8A), g: U(0x1B8C), ng: U(0x1B8D), c: U(0x1B8E), j: U(0x1B8F), ny: U(0x1B91), t: U(0x1B92), d: U(0x1B93), n: U(0x1B94), p: U(0x1B95), b: U(0x1B98), m: U(0x1B99), y: U(0x1B9A), r: U(0x1B9B), l: U(0x1B9C), w: U(0x1B9D), s: U(0x1B9E), h: U(0x1BA0), f: U(0x1B96), v: U(0x1B97), q: U(0x1B8B), z: U(0x1B90), x: U(0x1B9F), kh: U(0x1BAE), sy: U(0x1BAF) },
+      ind: { a: U(0x1B83), i: U(0x1B84), u: U(0x1B85), 'é': U(0x1B86), o: U(0x1B87), e: U(0x1B88), eu: U(0x1B89) },
+      vs: { i: U(0x1BA4), u: U(0x1BA5), 'é': U(0x1BA6), o: U(0x1BA7), e: U(0x1BA8), eu: U(0x1BA9) },
+      coda: { ng: U(0x1B80), r: U(0x1B81), h: U(0x1B82) },
+      medial: { y: U(0x1BA1), r: U(0x1BA2), l: U(0x1BA3) },
+      virama: U(0x1BAA), digits: digits(0x1BB0), vowelDigraphs: ['eu']
+    },
+    bali: {
+      label: 'Bali', family: 'Noto Sans Balinese', sample: 'Om Swastyastu',
+      cons: { k: U(0x1B13), g: U(0x1B15), ng: U(0x1B17), c: U(0x1B18), j: U(0x1B1A), ny: U(0x1B1C), t: U(0x1B22), d: U(0x1B24), n: U(0x1B26), p: U(0x1B27), b: U(0x1B29), m: U(0x1B2B), y: U(0x1B2C), r: U(0x1B2D), l: U(0x1B2E), w: U(0x1B2F), s: U(0x1B32), h: U(0x1B33), kh: U(0x1B14), gh: U(0x1B16), th: U(0x1B1D), dh: U(0x1B1F), sy: U(0x1B31) },
+      ind: { a: U(0x1B05), i: U(0x1B07), u: U(0x1B09), 'é': U(0x1B0F), o: U(0x1B11), e: U(0x1B05, 0x1B42) },
+      vs: { i: U(0x1B36), u: U(0x1B38), 'é': U(0x1B3E), o: U(0x1B40), e: U(0x1B42) },
+      coda: { ng: U(0x1B02), r: U(0x1B03), h: U(0x1B04) },
+      virama: U(0x1B44), digits: digits(0x1B50), punct: { ',': U(0x1B5E), '.': U(0x1B5F) }
+    },
+    batak: {
+      label: 'Batak', family: 'Noto Sans Batak', sample: 'Horas',
+      cons: { k: U(0x1BC2), h: U(0x1BC2), b: U(0x1BC5), p: U(0x1BC7), n: U(0x1BC9), w: U(0x1BCB), g: U(0x1BCE), j: U(0x1BD0), d: U(0x1BD1), r: U(0x1BD2), m: U(0x1BD4), t: U(0x1BD6), s: U(0x1BD8), y: U(0x1BDB), ng: U(0x1BDD), l: U(0x1BDE), ny: U(0x1BE0), c: U(0x1BE1) },
+      ind: { a: U(0x1BC0), i: U(0x1BE4), u: U(0x1BE5), 'é': U(0x1BC0, 0x1BE7), o: U(0x1BC0, 0x1BEC), e: U(0x1BC0, 0x1BE9) },
+      vs: { i: U(0x1BEA), u: U(0x1BEE), 'é': U(0x1BE7), o: U(0x1BEC), e: U(0x1BE9) },
+      coda: { ng: U(0x1BF0), h: U(0x1BF1) },
+      virama: U(0x1BF2), prenasal: { nd: U(0x1BE2), mb: U(0x1BE3) }
+    },
+    lontara: {
+      label: 'Lontara', family: 'Noto Sans Buginese', sample: 'Salama',
+      cons: { k: U(0x1A00), g: U(0x1A01), ng: U(0x1A02), c: U(0x1A0C), j: U(0x1A0D), ny: U(0x1A0E), t: U(0x1A08), d: U(0x1A09), n: U(0x1A0A), p: U(0x1A04), b: U(0x1A05), m: U(0x1A06), y: U(0x1A10), r: U(0x1A11), l: U(0x1A12), w: U(0x1A13), s: U(0x1A14), h: U(0x1A16) },
+      ind: { a: U(0x1A15), i: U(0x1A15, 0x1A17), u: U(0x1A15, 0x1A18), 'é': U(0x1A15, 0x1A19), o: U(0x1A15, 0x1A1A), e: U(0x1A15, 0x1A1B) },
+      vs: { i: U(0x1A17), u: U(0x1A18), 'é': U(0x1A19), o: U(0x1A1A), e: U(0x1A1B) },
+      kill: 'drop',
+      prenasal: { ngk: U(0x1A03), mp: U(0x1A07), nr: U(0x1A0B), nc: U(0x1A0F) }
+    },
+    rejang: {
+      label: 'Rejang', family: 'Noto Sans Rejang', sample: 'Selamat',
+      cons: { k: U(0xA930), g: U(0xA931), ng: U(0xA932), t: U(0xA933), d: U(0xA934), n: U(0xA935), p: U(0xA936), b: U(0xA937), m: U(0xA938), c: U(0xA939), j: U(0xA93A), ny: U(0xA93B), s: U(0xA93C), r: U(0xA93D), l: U(0xA93E), y: U(0xA93F), w: U(0xA940), h: U(0xA941) },
+      ind: { a: U(0xA946), i: U(0xA946, 0xA947), u: U(0xA946, 0xA948), 'é': U(0xA946, 0xA949), o: U(0xA946, 0xA94B), e: U(0xA946, 0xA94D), ai: U(0xA946, 0xA94A), au: U(0xA946, 0xA94C) },
+      vs: { i: U(0xA947), u: U(0xA948), 'é': U(0xA949), o: U(0xA94B), e: U(0xA94D), ai: U(0xA94A), au: U(0xA94C) },
+      coda: { ng: U(0xA94F), n: U(0xA950), r: U(0xA951), h: U(0xA952) },
+      virama: U(0xA953), vowelDigraphs: ['ai', 'au'],
+      prenasal: { mb: U(0xA942), ngg: U(0xA943), nd: U(0xA944), nj: U(0xA945) }
+    },
+    kawi: {
+      label: 'Kawi', family: 'Noto Sans Kawi', sample: 'Om Swastiastu',
+      cons: { k: U(0x11F12), kh: U(0x11F13), g: U(0x11F14), gh: U(0x11F15), ng: U(0x11F16), c: U(0x11F17), ch: U(0x11F18), j: U(0x11F19), jh: U(0x11F1A), ny: U(0x11F1B), tt: U(0x11F1C), dd: U(0x11F1E), nn: U(0x11F20), t: U(0x11F21), th: U(0x11F22), d: U(0x11F23), dh: U(0x11F24), n: U(0x11F25), p: U(0x11F26), ph: U(0x11F27), b: U(0x11F28), bh: U(0x11F29), m: U(0x11F2A), y: U(0x11F2B), r: U(0x11F2C), l: U(0x11F2D), w: U(0x11F2E), sh: U(0x11F2F), sy: U(0x11F2F), ss: U(0x11F30), s: U(0x11F31), h: U(0x11F32) },
+      ind: { a: U(0x11F04), aa: U(0x11F05), i: U(0x11F06), ii: U(0x11F07), u: U(0x11F08), uu: U(0x11F09), 'é': U(0x11F0E), o: U(0x11F10), e: U(0x11F04, 0x11F40), ai: U(0x11F0F) },
+      vs: { aa: U(0x11F34), i: U(0x11F36), ii: U(0x11F37), u: U(0x11F38), uu: U(0x11F39), 'é': U(0x11F3E), o: U(0x11F3E, 0x11F34), e: U(0x11F40), ai: U(0x11F3F) },
+      coda: { ng: U(0x11F01), h: U(0x11F03) },
+      virama: U(0x11F41), conjoin: U(0x11F42), digits: digits(0x11F50), punct: { '.': U(0x11F43) },
+      vowelDigraphs: ['aa', 'ii', 'uu', 'ai']
+    },
+    pallawa: {
+      label: 'Pallawa', family: 'Noto Sans Grantha', sample: 'Namaste',
+      cons: { k: U(0x11315), kh: U(0x11316), g: U(0x11317), gh: U(0x11318), ng: U(0x11319), c: U(0x1131A), ch: U(0x1131B), j: U(0x1131C), jh: U(0x1131D), ny: U(0x1131E), tt: U(0x1131F), dd: U(0x11321), nn: U(0x11323), t: U(0x11324), th: U(0x11325), d: U(0x11326), dh: U(0x11327), n: U(0x11328), p: U(0x1132A), ph: U(0x1132B), b: U(0x1132C), bh: U(0x1132D), m: U(0x1132E), y: U(0x1132F), r: U(0x11330), l: U(0x11332), w: U(0x11335), sh: U(0x11336), sy: U(0x11336), ss: U(0x11337), s: U(0x11338), h: U(0x11339) },
+      ind: { a: U(0x11305), aa: U(0x11306), i: U(0x11307), ii: U(0x11308), u: U(0x11309), uu: U(0x1130A), 'é': U(0x1130F), o: U(0x11313), e: U(0x1130F), ai: U(0x11310), au: U(0x11314) },
+      vs: { aa: U(0x1133E), i: U(0x1133F), ii: U(0x11340), u: U(0x11341), uu: U(0x11342), 'é': U(0x11347), o: U(0x1134B), e: U(0x11347), ai: U(0x11348), au: U(0x1134C) },
+      coda: { ng: U(0x11302), h: U(0x11303) },
+      virama: U(0x1134D), vowelDigraphs: ['aa', 'ii', 'uu', 'ai', 'au']
+    }
+  };
+  var ALIAS = { kh: 'k', gh: 'g', sy: 's', sh: 's', ss: 's', dh: 'd', th: 't', ph: 'p', bh: 'b', ch: 'c', jh: 'j', tt: 't', dd: 'd', nn: 'n', f: 'p', v: 'w', z: 'j', x: 's', q: 'k' };
+  var VFALL = { eu: 'e', aa: 'a', ii: 'i', uu: 'u', ai: 'e', au: 'o' };
+  var SPECIAL_C = { 'ṭ': 'tt', 'ḍ': 'dd', 'ṇ': 'nn', 'ś': 'sh', 'ṣ': 'ss', 'ṅ': 'ng', 'ñ': 'ny' };
+  var LONG_V = { 'ā': 'aa', 'ī': 'ii', 'ū': 'uu' };
+  var DIGRAPHS = ['ng', 'ny', 'kh', 'gh', 'sy', 'dh', 'th', 'ph', 'bh', 'ch', 'jh'];
+  var VOWEL_CH = 'aiueoéèēêəĕ';
+  function isVowelChar(ch) { return !!ch && VOWEL_CH.indexOf(ch) !== -1; }
+  function resolveCons(cfg, k) {
+    for (var n = 0; n < 4 && k; n++) {
+      if (cfg.cons[k]) return cfg.cons[k];
+      k = ALIAS[k];
+    }
+    return null;
+  }
+  function vsign(cfg, k) {
+    if (k === 'a') return '';
+    for (var n = 0; n < 4 && k; n++) {
+      if (cfg.vs[k] !== undefined) return cfg.vs[k];
+      k = VFALL[k];
+      if (k === 'a') return '';
+    }
+    return '';
+  }
+  function indep(cfg, k) {
+    for (var n = 0; n < 4 && k; n++) {
+      if (cfg.ind[k] !== undefined) return cfg.ind[k];
+      k = VFALL[k];
+    }
+    return cfg.ind.a;
+  }
+  function tokenize(str, cfg) {
+    var s = str.normalize('NFC').toLowerCase();
+    var toks = [];
+    var i = 0;
+    var pren = cfg.prenasal ? Object.keys(cfg.prenasal).sort(function (a, b) { return b.length - a.length; }) : [];
+    var vd = cfg.vowelDigraphs || [];
+    while (i < s.length) {
+      var ch = s[i];
+      if (LONG_V[ch]) { toks.push({ t: 'V', k: LONG_V[ch] }); i++; continue; }
+      if (SPECIAL_C[ch]) { toks.push({ t: 'C', k: SPECIAL_C[ch] }); i++; continue; }
+      var two = s.substr(i, 2);
+      if (vd.indexOf(two) !== -1) { toks.push({ t: 'V', k: two }); i += 2; continue; }
+      if (isVowelChar(ch)) {
+        var key = ch;
+        if (ch === 'è' || ch === 'ē') key = 'é';
+        else if (ch === 'ê' || ch === 'ə' || ch === 'ĕ') key = 'e';
+        toks.push({ t: 'V', k: key });
+        i++;
+        continue;
+      }
+      if (ch >= 'a' && ch <= 'z') {
+        var done = false;
+        for (var p = 0; p < pren.length; p++) {
+          var pk = pren[p];
+          if (s.substr(i, pk.length) === pk && isVowelChar(s[i + pk.length])) {
+            toks.push({ t: 'C', k: pk, pre: true });
+            i += pk.length;
+            done = true;
+            break;
+          }
+        }
+        if (done) continue;
+        if (DIGRAPHS.indexOf(two) !== -1) { toks.push({ t: 'C', k: two }); i += 2; continue; }
+        toks.push({ t: 'C', k: ch });
+        i++;
+        continue;
+      }
+      toks.push({ t: 'O', ch: ch });
+      i++;
+    }
+    return toks;
+  }
+  function convert(input, scriptId) {
+    var cfg = SCRIPTS[scriptId];
+    if (!cfg) return input;
+    var toks = tokenize(String(input), cfg);
+    var out = '';
+    var prev = false;
+    var i = 0;
+    while (i < toks.length) {
+      var tk = toks[i];
+      if (tk.t === 'O') {
+        var c = tk.ch;
+        if (cfg.digits && cfg.digits[c]) out += cfg.digits[c];
+        else if (cfg.punct && cfg.punct[c]) out += cfg.punct[c];
+        else out += c;
+        if (!/[a-z0-9]/i.test(c) || /\s/.test(c)) prev = false;
+        i++;
+        continue;
+      }
+      if (tk.t === 'V') {
+        out += indep(cfg, tk.k);
+        prev = true;
+        i++;
+        continue;
+      }
+      var glyph = tk.pre ? cfg.prenasal[tk.k] : resolveCons(cfg, tk.k);
+      if (!glyph) { out += tk.k; prev = false; i++; continue; }
+      var n1 = toks[i + 1], n2 = toks[i + 2];
+      if (n1 && n1.t === 'V') {
+        out += glyph + vsign(cfg, n1.k);
+        prev = true;
+        i += 2;
+        continue;
+      }
+      if (cfg.medial && n1 && n1.t === 'C' && cfg.medial[n1.k] && n2 && n2.t === 'V') {
+        if (cfg.medialRE && n1.k === 'r' && n2.k === 'e') out += glyph + cfg.medialRE;
+        else out += glyph + cfg.medial[n1.k] + vsign(cfg, n2.k);
+        prev = true;
+        i += 3;
+        continue;
+      }
+      if (prev && cfg.coda && cfg.coda[tk.k]) {
+        out += cfg.coda[tk.k];
+        i++;
+        continue;
+      }
+      if (cfg.kill === 'drop') { i++; continue; }
+      var next = toks[i + 1];
+      var vir = (next && next.t === 'C' && cfg.conjoin) ? cfg.conjoin : cfg.virama;
+      out += glyph + vir;
+      prev = true;
+      i++;
+    }
+    return out;
+  }
+  var api = { SCRIPTS: SCRIPTS, convert: convert, tokenize: tokenize };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.PADAS = api;
+})(typeof self !== 'undefined' ? self : this);
