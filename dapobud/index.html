@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="id">
+  
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIG - Dapobud Identity Generator | PT Bayu Angora Space</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TEMPLATE - GANTI DI SINI SAJA JIKA MAU GANTI DESAIN ===== */
+:root{
+  --bg:#111111; --card:#1a1a1a; --line:#333333;
+  --gold:#ffb800; --blue:#1a56ff; --red:#ff2a2a; --white:#ffffff;
+  /* Ganti file gambar template di folder yang sama */
+  --idcard-bg:url('id-card-bg.jpg');
+  --cert-bg:url('cert-bg.jpg');
+  --logo:url('logo-padas.jpg');
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#fff;font-family:Inter,system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:12px;min-height:100vh}
+.wrap{width:100%;max-width:860px;display:flex;flex-direction:column;gap:14px;align-items:center}
+h1{font-family:'Bebas Neue';font-size:42px;letter-spacing:8px;text-align:center;line-height:.9}
+h2{font-size:16px;font-weight:400;text-align:center;opacity:.9}
+.banner{width:100%;height:90px;background:#1e1e1e;border:1px dashed #444;display:flex;align-items:center;justify-content:center;color:#777;font-size:12px;position:relative;overflow:hidden;cursor:pointer}
+.banner img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.banner span{position:relative;z-index:1}
+.inputBox{width:100%;background:var(--card);border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:10px}
+.label{font-size:10px;letter-spacing:1px;opacity:.5;font-family:monospace;text-transform:uppercase}
+#dapobudInput{width:100%;background:#222;border:2px solid #444;color:#fff;padding:16px;font-size:22px;font-weight:800;text-align:center;letter-spacing:2px;text-transform:uppercase;outline:none}
+#dapobudInput:focus{border-color:var(--gold)}
+.btn{padding:14px;border:1px solid #fff;background:#fff;color:#000;font-family:'Bebas Neue';font-size:18px;letter-spacing:1px;cursor:pointer;width:100%}
+.btn-gold{background:var(--gold);border-color:var(--gold)}
+.btn-outline{background:transparent;color:#fff}
+.btn-small{padding:8px 12px;font-size:13px;width:auto}
+.row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;width:100%}
+.status{width:100%;padding:10px;font-size:12px;text-align:center;background:#1e1e1e;border:1px solid #333;display:none}
+.status.ok{border-color:#00e676;color:#8affb0;display:block}
+.status.err{border-color:#ff2a2a;color:#ffb0b0;display:block}
+.status.warn{border-color:var(--gold);color:#ffe9a0;display:block}
+/* ID CARD - 85.6 x 54mm = 1011 x 638 px @300dpi */
+.idcard-wrap{width:100%;display:flex;flex-direction:column;gap:8px;align-items:center}
+.idcard{
+  width:100%;max-width:640px;aspect-ratio:85.6/54;background:#fff;color:#111;position:relative;overflow:hidden;border-radius:12px;
+  background-image:var(--idcard-bg);background-size:cover;background-position:center;
+  display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+.idcard-top{background:#111;color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.idcard-top b{font-family:'Bebas Neue';letter-spacing:2px;font-size:16px}
+.idcard-top span{font-size:9px;opacity:.7}
+.idcard-body{flex:1;display:flex;gap:14px;padding:14px}
+.photo{width:110px;height:140px;background:#ddd;border:2px solid #111;overflow:hidden;flex-shrink:0;display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo span{font-size:9px;text-align:center;color:#666;padding:6px}
+.id-info{flex:1;display:flex;flex-direction:column;gap:3px}
+.id-info h3{font-size:22px;line-height:1;text-transform:uppercase}
+.id-info .role{font-size:11px;background:var(--gold);display:inline-block;padding:2px 6px;font-weight:800;width:fit-content}
+.id-info table{font-size:11px;border-collapse:collapse;margin-top:6px}
+.id-info td{padding:2px 4px 2px 0;vertical-align:top}
+.id-info td:first-child{opacity:.6;width:70px}
+.idcard-bottom{background:#111;color:#fff;padding:8px 14px;display:flex;justify-content:space-between;align-items:center;font-size:9px}
+.qr{width:52px;height:52px;background:#fff;padding:2px}
+/* CERTIFICATE - A4 Portrait 210 x 297mm */
+.cert-wrap{width:100%;display:flex;flex-direction:column;gap:8px;align-items:center}
+.certificate{
+  width:100%;max-width:640px;aspect-ratio:210/297;background:#fff;color:#111;position:relative;overflow:hidden;
+  background-image:var(--cert-bg);background-size:cover;
+  border:10px solid #b9975b;outline:3px solid #111;outline-offset:-16px;
+  padding:32px 36px;text-align:center;display:flex;flex-direction:column;gap:10px;
+}
+.certificate .top{font-size:9px;letter-spacing:3px;opacity:.7}
+.certificate h4{font-family:'Playfair Display';font-size:28px;line-height:1}
+.certificate .goldline{height:3px;background:var(--gold);width:120px;margin:0 auto}
+.certificate .name{font-family:'Playfair Display';font-size:30px;border-bottom:2px solid #111;padding-bottom:6px}
+.certificate p{font-size:12px;line-height:1.6}
+.certificate .sign{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font-size:10px}
+.certificate .stamp{width:70px;height:70px;border:2px dashed #b9975b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;transform:rotate(-12deg)}
+.manual{width:100%;background:#1a1a1a;border:1px solid #333;padding:12px;display:none;flex-direction:column;gap:8px}
+.manual input,.manual select{width:100%;background:#222;border:1px solid #444;color:#fff;padding:10px}
+.manual .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:600px){.manual .grid{grid-template-columns:1fr}}
+footer{opacity:.4;font-size:11px;font-family:monospace;margin:10px 0}
+</style>
+  
+</head>
+  
+<body>
+  
+<div class="wrap">
+<h1>D I G</h1><h2>Dapobud Identity Generator</h2>
+
+<div class="banner" onclick="document.getElementById('topBannerFile').click()"><span>[ Banner / Ads / Donate / Sponsor ] - top-banner.jpg</span><img id="topBannerImg" src="top-banner.jpg" onerror="this.style.display='none'"><input type="file" id="topBannerFile" accept="image/*" hidden></div>
+<!-- INPUT -->
+<div class="inputBox">
+<span class="label">[ Input Dapobud Number ]</span>
+<input id="dapobudInput" placeholder="TB.XXX  atau  LK.XXX" value="">
+<span style="font-size:11px;opacity:.6;text-align:center">( Example TB.001 or LK.001 - try demo: TB.001 / LK.001 )</span>
+<button class="btn btn-gold" id="verifyBtn">[ Verify Dapobud Identity ]</button>
+<div class="row">
+<button class="btn btn-outline btn-small" id="demoTB">Demo TB.001</button>
+<button class="btn btn-outline btn-small" id="demoLK">Demo LK.001</button>
+<button class="btn btn-outline btn-small" id="editManual">✏️ Isi Manual / Edit Data</button>
+</div>
+<div id="status" class="status"></div>
+<div style="font-size:10px;opacity:.5;text-align:center">Source: <a href="https://dapobud.kemenbud.go.id/sdm/" target="_blank" style="color:#ffb800">dapobud.kemenbud.go.id/sdm/</a> (TB) & <a href="https://dapobud.kemenbud.go.id/lembaga/" target="_blank" style="color:#ffb800">/lembaga/</a> (LK) - Dapobud tidak punya API publik, jadi verifikasi via database lokal + link resmi.</div>
+</div>
+<!-- MANUAL FORM (muncul jika tidak ditemukan / edit) -->
+<div class="manual" id="manualForm">
+<span class="label">Data Dapobud - isi / koreksi jika belum di database</span>
+<div class="grid">
+<input id="f_nama" placeholder="Nama Lengkap / Nama Lembaga">
+<input id="f_id" placeholder="No. Dapobud (TB.XXX / LK.XXX)">
+<input id="f_bidang" placeholder="Bidang / Jenis - ex: Seni Tari, Musik, Kriya">
+<input id="f_wilayah" placeholder="Kabupaten / Kota, Provinsi">
+<input id="f_nik" placeholder="NIK / NIB / No. SK (opsional)">
+<input id="f_tahun" placeholder="Tahun Terdaftar - ex: 2024">
+</div>
+<select id="f_jenis"><option value="TB">TB - Tenaga Budaya / Cultural Worker</option><option value="LK">LK - Lembaga Kebudayaan / Cultural Board</option></select>
+<input id="f_foto" type="file" accept="image/*">
+<button class="btn" id="applyManual">✓ Terapkan & Generate Ulang</button>
+</div>
+<!-- RESULT ID CARD -->
+<div id="resultArea" style="width:100%;display:none;flex-direction:column;gap:16px">
+<div class="idcard-wrap">
+<span class="label">[ Result for Dapobud ID Card ] - 85.6 x 54mm Standard</span>
+<div class="idcard" id="idCard">
+<div class="idcard-top"><div><b>DAPOBUD • KEMENBUD RI</b><br><span>DATA POKOK KEBUDAYAAN</span></div><div style="text-align:right"><span id="cardType">TENAGA BUDAYA</span><br><b id="cardId">TB.001</b></div></div>
+<div class="idcard-body">
+<div class="photo" onclick="document.getElementById('photoInput').click()"><img id="photoImg" src="" style="display:none"><span id="photoPlaceholder">Klik untuk<br>Upload Foto<br>3x4</span><input type="file" id="photoInput" accept="image/*" hidden></div>
+<div class="id-info">
+<h3 id="cardNama">BAYU ANGORA</h3>
+<span class="role" id="cardBidang">SENI - AKSARA NUSANTARA</span>
+<table>
+<tr><td>ID DAPOBUD</td><td><b id="cardId2">TB.001</b></td></tr>
+<tr><td>NIK / NIB</td><td id="cardNik">3204xxxxxxxxxx</td></tr>
+<tr><td>WILAYAH</td><td id="cardWilayah">Kota Bandung, Jawa Barat</td></tr>
+<tr><td>BERLAKU</td><td id="cardBerlaku">2024 - 2029 • TER VERIFIKASI</td></tr>
+</table>
+</div>
+</div>
+<div class="idcard-bottom"><span>© PT Bayu Angora Space • PADAS • DIG</span><div class="qr" id="qrCard"></div><span>Scan untuk verifikasi<br>dapobud.kemenbud.go.id</span></div>
+</div>
+<div class="row">
+<button class="btn btn-small" onclick="downloadCard('png')">Download ID Card .png</button>
+<button class="btn btn-small" onclick="downloadCard('jpg')">.jpg</button>
+<button class="btn btn-small" onclick="downloadCard('pdf')">.pdf</button>
+</div>
+</div>
+<!-- RESULT CERTIFICATE -->
+<div class="cert-wrap">
+<span class="label">[ Result for Dapobud Certificate ] - A4 (210 x 297mm)</span>
+<div class="certificate" id="certCard">
+<div class="top">KEMENTERIAN KEBUDAYAAN REPUBLIK INDONESIA<br>DATA POKOK KEBUDAYAAN - DAPOBUD</div>
+<div class="goldline"></div>
+<h4 id="certTitle">SERTIFIKAT<br>TENAGA BUDAYA</h4>
+<p>Diberikan kepada:</p>
+<div class="name" id="certNama">BAYU ANGORA</div>
+<p id="certDesc">Atas dedikasi dan karya dalam pemajuan kebudayaan Indonesia<br>sebagai <b id="certBidang">Tenaga Budaya - Seni Aksara Nusantara</b><br>terdaftar di Dapobud dengan nomor <b id="certId">TB.001</b><br>Wilayah <span id="certWilayah">Kota Bandung, Jawa Barat</span></p>
+<div class="sign">
+<div style="text-align:left"><div class="stamp">TERVERIFIKASI<br>DAPOBUD</div><div id="certDate">Bandung, 5 November 2026</div></div>
+<div style="text-align:center"><div id="qrCert" style="width:70px;height:70px;background:#fff"></div><span style="font-size:8px">Scan Verifikasi</span></div>
+<div style="text-align:right">PT Bayu Angora Space<br><br><br><b>__________________</b><br>Direktur / Pimpinan</div>
+</div>
+</div>
+<div class="row">
+<button class="btn btn-small" onclick="downloadCert('png')">Download Sertifikat .png</button>
+<button class="btn btn-small" onclick="downloadCert('jpg')">.jpg</button>
+<button class="btn btn-small" onclick="downloadCert('pdf')">.pdf (A4)</button>
+</div>
+</div>
+
+<button class="btn" id="downloadAll">[ Download All ]<br><span style="font-size:11px;opacity:.7">(Download all files as .zip)</span></button>
+</div>
+
+<div class="banner" onclick="document.getElementById('botBannerFile').click()"><span>[ Banner / Ads / Donate / Sponsor ] - bottom-banner.jpg</span><img id="botBannerImg" src="bottom-banner.jpg" onerror="this.style.display='none'"><input type="file" id="botBannerFile" accept="image/*" hidden></div>
+<footer>© PT Bayu Angora Space</footer>
+</div>
+
+<script>
+// ===== TEMPLATE CONFIG - GANTI DI SINI UNTUK GANTI DESAIN =====
+const TEMPLATE = {
+  idCardBg: 'id-card-bg.jpg', // ganti file ini untuk ganti background ID Card
+  certBg: 'cert-bg.jpg', // ganti file ini untuk ganti background Sertifikat
+  logo: 'logo-padas.jpg',
+  issuer: 'PT Bayu Angora Space',
+  validYears: 5
+};
+// ===== DATABASE - GANTI / TAMBAH DATA ASLI DAPOBUD DI SINI =====
+// Cara tambah: copy 1 blok, ganti id, nama, dll. Atau buat file dapobud_db.json dan load via fetch
+const DEMO_DB = {
+  "TB.001": {type:"TB", nama:"BAYU ANGORA", bidang:"Seni - Aksara Nusantara & Kaligrafi", wilayah:"Kota Bandung, Jawa Barat", nik:"320405xxxxxxxxxx", tahun:"2024", foto:""},
+  "TB.002": {type:"TB", nama:"SITI NURJANAH", bidang:"Seni Tari - Jaipong", wilayah:"Kab. Bandung, Jawa Barat", nik:"3204xxxxxxxxxx", tahun:"2023", foto:""},
+  "TB.003": {type:"TB", nama:"ASEP SURYANA", bidang:"Musik - Karawitan Sunda", wilayah:"Kota Cimahi, Jawa Barat", nik:"3204xxxxxxxxxx", tahun:"2024", foto:""},
+  "LK.001": {type:"LK", nama:"SANGGAR PADAS AKSARA", bidang:"Lembaga Kebudayaan - Sanggar Seni & Aksara", wilayah:"Kota Bandung, Jawa Barat", nik:"NIB 123456789", tahun:"2022", foto:""},
+  "LK.002": {type:"LK", nama:"LEMBAGA BUDAYA SUNDA WANGI", bidang:"Lembaga Kebudayaan - Pelestarian Bahasa Sunda", wilayah:"Kab. Garut, Jawa Barat", nik:"NIB 987654321", tahun:"2023", foto:""},
+};
+let currentData = null;
+let currentId = "";
+const inputEl = document.getElementById('dapobudInput');
+const statusEl = document.getElementById('status');
+function showStatus(msg, type){
+  statusEl.textContent = msg; statusEl.className = 'status ' + type;
+}
+function normalizeId(v){
+  v = (v||'').trim().toUpperCase().replace(/\s+/g,'').replace('-','.').replace('_','.');
+  if(!v) return '';
+  // TB001 -> TB.001, LK001 -> LK.001
+  if(/^TB\d/.test(v)) v = 'TB.' + v.slice(2);
+  if(/^LK\d/.test(v)) v = 'LK.' + v.slice(2);
+  return v;
+}
+function dapobudUrl(id){
+  if(id.startsWith('TB')) return 'https://dapobud.kemenbud.go.id/sdm/?q=' + encodeURIComponent(id);
+  return 'https://dapobud.kemenbud.go.id/lembaga/?q=' + encodeURIComponent(id);
+}
+async function tryFetchDapobud(id){
+  // Coba via proxy (Dapobud block CORS). Jika gagal, fallback ke DB lokal.
+  // Ini contoh - ganti dengan endpoint API resmi jika Kemenbud buka API nanti
+  try{
+    const url = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(dapobudUrl(id));
+    const res = await fetch(url, {signal: AbortSignal.timeout(5000)});
+    if(!res.ok) throw new Error('blocked');
+    const html = await res.text();
+    // Coba parse nama dari HTML - sangat tergantung struktur Dapobud, jadi fallback tetap DB
+    const m = html.match(/<h[1-3][^>]*>([^<]{3,80})<\/h[1-3]>/i);
+    if(m && DEMO_DB[id]) return DEMO_DB[id];
+    return null;
+  }catch(e){ return null; }
+}
+async function verify(){
+  const id = normalizeId(inputEl.value);
+  inputEl.value = id;
+  if(!id || (!id.startsWith('TB.') && !id.startsWith('LK.'))){
+    showStatus('❌ Format salah. Contoh: TB.001 atau LK.001', 'err');
+    return;
+  }
+  showStatus('⏳ Memverifikasi ' + id + ' ke Dapobud...', 'warn');
+  // 1. Cek DB lokal
+  let data = DEMO_DB[id];
+  // 2. Coba fetch online (akan gagal jika CORS, tapi tetap coba)
+  if(!data){
+    const online = await tryFetchDapobud(id);
+    if(online) data = online;
+  }
+  if(!data){
+    showStatus('⚠️ ' + id + ' tidak ditemukan di database lokal. Silakan isi manual / cek link resmi Dapobud. Klik "Isi Manual" di bawah.', 'warn');
+    document.getElementById('manualForm').style.display = 'flex';
+    document.getElementById('f_id').value = id;
+    document.getElementById('f_jenis').value = id.startsWith('TB') ? 'TB' : 'LK';
+    // Buka link resmi di tab baru untuk verifikasi manual
+    window.open(dapobudUrl(id), '_blank');
+    return;
+  }
+  currentData = data; currentId = id;
+  renderAll(id, data);
+  showStatus('✅ TER VERIFIKASI - ' + id + ' • ' + data.nama + ' • ' + (data.type==='TB' ? 'Tenaga Budaya' : 'Lembaga Kebudayaan') + ' • Sumber: Dapobud Kemebud RI', 'ok');
+  document.getElementById('resultArea').style.display = 'flex';
+  document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+}
+function renderAll(id, d){
+  const isTB = d.type === 'TB';
+  const typeLabel = isTB ? 'TENAGA BUDAYA' : 'LEMBAGA KEBUDAYAAN';
+  const typeLabel2 = isTB ? 'TENAGA BUDAYA' : 'LEMBAGA KEBUDAYAAN';
+  const berlaku = d.tahun + ' - ' + (parseInt(d.tahun)+TEMPLATE.validYears);
+  // ID CARD
+  document.getElementById('cardType').textContent = typeLabel;
+  document.getElementById('cardId').textContent = id;
+  document.getElementById('cardId2').textContent = id;
+  document.getElementById('cardNama').textContent = d.nama;
+  document.getElementById('cardBidang').textContent = d.bidang.toUpperCase();
+  document.getElementById('cardNik').textContent = d.nik || '-';
+  document.getElementById('cardWilayah').textContent = d.wilayah;
+  document.getElementById('cardBerlaku').textContent = berlaku + ' • TER VERIFIKASI';
+  // CERT
+  document.getElementById('certTitle').innerHTML = 'SERTIFIKAT<br>' + typeLabel2;
+  document.getElementById('certNama').textContent = d.nama;
+  document.getElementById('certBidang').textContent = (isTB ? 'Tenaga Budaya - ' : 'Lembaga Kebudayaan - ') + d.bidang;
+  document.getElementById('certId').textContent = id;
+  document.getElementById('certWilayah').textContent = d.wilayah;
+  document.getElementById('certDate').textContent = 'Bandung, ' + new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+  // QR
+  document.getElementById('qrCard').innerHTML = '';
+  document.getElementById('qrCert').innerHTML = '';
+  new QRCode(document.getElementById('qrCard'), {text: dapobudUrl(id), width:48, height:48});
+  new QRCode(document.getElementById('qrCert'), {text: dapobudUrl(id), width:66, height:66});
+  if(d.foto){
+    document.getElementById('photoImg').src = d.foto;
+    document.getElementById('photoImg').style.display = 'block';
+    document.getElementById('photoPlaceholder').style.display = 'none';
+  }
+}
+// Events
+document.getElementById('verifyBtn').onclick = verify;
+inputEl.addEventListener('keydown', e=>{ if(e.key==='Enter') verify(); });
+document.getElementById('demoTB').onclick = ()=>{ inputEl.value='TB.001'; verify(); };
+document.getElementById('demoLK').onclick = ()=>{ inputEl.value='LK.001'; verify(); };
+document.getElementById('editManual').onclick = ()=>{ const f=document.getElementById('manualForm'); f.style.display = f.style.display==='flex' ? 'none' : 'flex'; };
+document.getElementById('applyManual').onclick = ()=>{
+  const id = normalizeId(document.getElementById('f_id').value || inputEl.value);
+  const d = {
+    type: document.getElementById('f_jenis').value,
+    nama: document.getElementById('f_nama').value || 'NAMA BELUM DIISI',
+    bidang: document.getElementById('f_bidang').value || 'Bidang Kebudayaan',
+    wilayah: document.getElementById('f_wilayah').value || 'Indonesia',
+    nik: document.getElementById('f_nik').value || '-',
+    tahun: document.getElementById('f_tahun').value || new Date().getFullYear().toString(),
+    foto:""
+  };
+  DEMO_DB[id] = d; currentData = d; currentId = id; inputEl.value = id;
+  renderAll(id, d);
+  document.getElementById('resultArea').style.display = 'flex';
+  showStatus('✅ Data manual diterapkan untuk ' + id, 'ok');
+  document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+};
+document.getElementById('photoInput').onchange = e=>{
+  const f = e.target.files[0]; if(!f) return;
+  const url = URL.createObjectURL(f);
+  document.getElementById('photoImg').src = url; document.getElementById('photoImg').style.display='block';
+  document.getElementById('photoPlaceholder').style.display='none';
+};
+document.getElementById('f_foto').onchange = e=>{
+  const f = e.target.files[0]; if(!f) return;
+  const url = URL.createObjectURL(f);
+  document.getElementById('photoImg').src = url; document.getElementById('photoImg').style.display='block';
+  document.getElementById('photoPlaceholder').style.display='none';
+};
+// Banner upload
+document.getElementById('topBannerFile').onchange = e=>{ const f=e.target.files[0]; if(f) document.getElementById('topBannerImg').src=URL.createObjectURL(f); };
+document.getElementById('botBannerFile').onchange = e=>{ const f=e.target.files[0]; if(f) document.getElementById('botBannerImg').src=URL.createObjectURL(f); };
+// Download helpers
+async function capture(el, scale=3){
+  const canvas = await html2canvas(el, {scale: scale, backgroundColor:'#ffffff', useCORS:true});
+  return canvas;
+}
+async function downloadCard(type){
+  if(!currentId){ showStatus('❌ Verifikasi dulu ID Dapobud', 'err'); return; }
+  const el = document.getElementById('idCard');
+  if(type==='png' || type==='jpg'){
+    const c = await capture(el, 3);
+    const a = document.createElement('a'); a.download = `ID-Card-${currentId}.`+type; a.href = c.toDataURL(type==='jpg' ? 'image/jpeg' : 'image/png', 0.95); a.click();
+  } else {
+    const c = await capture(el, 3);
+    const {jsPDF} = window.jspdf;
+    // ID Card size: 85.6 x 54 mm
+    const pdf = new jsPDF({orientation:'landscape', unit:'mm', format:[85.6,54]});
+    pdf.addImage(c.toDataURL('image/png'), 'PNG', 0,0,85.6,54);
+    pdf.save(`ID-Card-${currentId}.pdf`);
+  }
+}
+async function downloadCert(type){
+  if(!currentId){ showStatus('❌ Verifikasi dulu ID Dapobud', 'err'); return; }
+  const el = document.getElementById('certCard');
+  if(type==='png' || type==='jpg'){
+    const c = await capture(el, 2);
+    const a = document.createElement('a'); a.download = `Sertifikat-${currentId}.`+type; a.href = c.toDataURL(type==='jpg' ? 'image/jpeg' : 'image/png', 0.92); a.click();
+  } else {
+    const c = await capture(el, 2);
+    const {jsPDF} = window.jspdf;
+    const pdf = new jsPDF({orientation:'portrait', unit:'mm', format:'a4'});
+    pdf.addImage(c.toDataURL('image/png'), 'PNG', 0,0,210,297);
+    pdf.save(`Sertifikat-${currentId}.pdf`);
+  }
+}
+document.getElementById('downloadAll').onclick = async ()=>{
+  if(!currentId){ showStatus('❌ Verifikasi dulu', 'err'); return; }
+  showStatus('⏳ Membuat ZIP...', 'warn');
+  const zip = new JSZip();
+  const cardCanvas = await capture(document.getElementById('idCard'), 3);
+  const certCanvas = await capture(document.getElementById('certCard'), 2);
+  const cardBlob = await new Promise(r=>cardCanvas.toBlob(r,'image/png'));
+  const certBlob = await new Promise(r=>certCanvas.toBlob(r,'image/png'));
+  zip.file(`ID-Card-${currentId}.png`, cardBlob);
+  zip.file(`Sertifikat-${currentId}.png`, certBlob);
+  zip.file(`DATA-${currentId}.txt`, `DAPOBUD ID: ${currentId}\nNama: ${currentData.nama}\nJenis: ${currentData.type}\nBidang: ${currentData.bidang}\nWilayah: ${currentData.wilayah}\nSumber: ${dapobudUrl(currentId)}\nGenerator: DIG - PT Bayu Angora Space`);
+  const blob = await zip.generateAsync({type:'blob'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `DIG-${currentId}.zip`; a.click();
+  showStatus('✅ ZIP berhasil diunduh: DIG-' + currentId + '.zip', 'ok');
+};
+// Auto-load dapobud_db.json if exists (optional)
+fetch('dapobud_db.json').then(r=>r.json()).then(j=>{ Object.assign(DEMO_DB, j); console.log('dapobud_db.json loaded', Object.keys(j).length); }).catch(()=>{});
+</script>
+  
+</body>
+  
+</html>
