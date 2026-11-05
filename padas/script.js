@@ -31,7 +31,7 @@
     { label: 'Wh', name: 'White', hex: '#fff' },
     { label: 'Bk', name: 'Black', hex: '#000' }
   ];
-  var state = { script: 'sunda', style: '', size: 36, stroke: 0, color: '#e60', bg: '', input: SCRIPTS.sunda.sample, converted: '' };
+  var state = { script: 'sunda', style: '', size: 36, stroke: 0, color: '#ca0', bg: '', input: SCRIPTS.sunda.sample, converted: '' };
   /* ---------- helpers ---------- */
   function hexToRgb(h) {
     var n = parseInt(h.slice(1), 16);
