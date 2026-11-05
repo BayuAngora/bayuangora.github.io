@@ -21,6 +21,7 @@ body {
   padding-block: 20px 32px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
+  text-align: center;
   -webkit-text-size-adjust: 100%;
 }
 .wrap { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
@@ -88,6 +89,7 @@ h1 {
   background: var(--panel); color: var(--fg);
   border: 1px solid var(--line); border-radius: 6px;
   padding: 10px 12px; font-size: 16px; line-height: 1.4;
+  text-align: center;
 }
 .btn { padding: 0 14px; min-height: 44px; }
 #input {
@@ -95,6 +97,7 @@ h1 {
   background: var(--panel); color: var(--fg);
   border: 1px solid var(--line); border-radius: 8px;
   padding: 12px 14px; font: 400 16px/1.5 var(--font-body);
+  text-align: center;
 }
 #input::placeholder { color: var(--mute); }
 .hint { margin: 8px 0 0; color: var(--mute); font-size: 12.5px; text-align: center; text-wrap: balance; }
