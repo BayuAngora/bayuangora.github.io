@@ -148,3 +148,48 @@ footer { text-align: center; color: var(--mute); font-size: 13px; padding-top: 4
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+@font-face {
+font-display: swap;
+font-family: "Noto Sans";
+src: url("/noto-sans.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Jawa";
+src: url("/noto-jawa.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Sunda";
+src: url("/noto-sunda.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Bali";
+src: url("/noto-bali.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Batak";
+src: url("/noto-batak.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Lontara";
+src: url("/noto-lontara.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Rejang";
+src: url("/noto-rejang.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Kawi";
+src: url("/noto-kawi.woff2");
+}
+@font-face {
+font-display: swap;
+font-family: "Noto Pallawa";
+src: url("/noto-pallawa.woff2");
+}
