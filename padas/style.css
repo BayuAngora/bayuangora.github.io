@@ -1,15 +1,15 @@
 :root {
-  --bg: #222;
-  --panel: #111;
+  --bg: #111;
+  --panel: #222;
   --raised: #eec;
   --line: #ca0;
   --fg: #ca0;
   --mute: #888;
   --on-fg: #222;
   --focus: #ca0;
-  --font-display: "Noto Sans", "noto-sans", system-ui, sans-serif;
-  --font-body: "Noto Sans", "noto-sans", system-ui, sans-serif;
-  --font-mono: "Noto Sans", "noto-sans", system-ui, sans-serif;
+  --font-display: "Noto Sans", system-ui, sans-serif;
+  --font-body: "Noto Sans", system-ui, sans-serif;
+  --font-mono: "Noto Sans", system-ui, sans-serif;
   color-scheme: dark;
 }
 html, body { height: auto; }
@@ -64,9 +64,9 @@ h1 {
 .chip { padding: 12px 14px; min-height: 40px; }
 .chip:hover:not(:disabled), .btn:hover, .plus:hover { background: var(--raised); border-color: #ca0; }
 .chip[aria-pressed="true"] { background: var(--fg); color: var(--on-fg); border-color: var(--fg); }
-.chip:disabled { opacity: .45; cursor: not-allowed; border-style: dashed; }
-.chip small { font-size: 9px; letter-spacing: .08em; margin-left: 6px; text-transform: uppercase; color: var(--mute); }
-:where(button, textarea, input):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.chip:disabled { opacity: .5; cursor: not-allowed; border-style: dashed; }
+.chip small { font-size: 10px; letter-spacing: .08em; margin-left: 6px; text-transform: uppercase; color: var(--mute); }
+:where(button, textarea, input):focus-visible { outline: 1px solid var(--focus); outline-offset: 1px; }
 .stage {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -109,7 +109,7 @@ h1 {
   width: 40px; height: 40px; padding: 0; display: grid; place-items: center;
   font-size: 12px; font-weight: 500;
 }
-.swatch[aria-pressed="true"] { outline: 2px solid var(--fg); outline-offset: 2px; }
+.swatch[aria-pressed="true"] { outline: 1px solid var(--fg); outline-offset: 1px; }
 .swatch.checker {
   background-color: #ca0;
   background-image:
