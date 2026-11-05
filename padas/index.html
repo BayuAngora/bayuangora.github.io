@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="id">
+    
+<head>
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>PADAS</title>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Balinese&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Batak&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Buginese&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Rejang&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kawi&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Grantha&display=swap">
+
+</head>
+
+<body>
+    
+<div class="wrap">
+  <header>
+    <h1>PADAS</h1>
+    <p class="sub">Pustaka Artistik Desain Aksara Sastra</p>
+  </header>
+  <!-- BANNER / ADS / DONATE / SPONSOR (top): replace banner-top.jpg (1200 x 150) and set the href to the sponsor link -->
+  <a class="slot" id="slotTop" href="#" target="_blank" rel="sponsored noopener" aria-label="Banner, ads, donate, sponsor">
+    <img src="banner-top.jpg" width="1200" height="150" alt="Banner / Ads / Donate / Sponsor">
+  </a>
+  <section aria-labelledby="lblScript">
+    <p class="label" id="lblScript">Aksara</p>
+    <div class="row" id="scripts" role="group" aria-labelledby="lblScript"></div>
+  </section>
+  <section aria-labelledby="lblResult">
+    <p class="label" id="lblResult">Result</p>
+    <div class="stage"><canvas id="out" role="img" aria-label="Rendered aksara"></canvas></div>
+    <div class="unicode-row">
+      <textarea id="unicode" readonly aria-label="Result as Unicode text" spellcheck="false"></textarea>
+    </div>
+  </section>
+  <section aria-labelledby="lblInput">
+    <p class="label" id="lblInput">Input</p>
+    <textarea id="input" maxlength="800" spellcheck="false" placeholder="Type Latin text here"></textarea>
+    <p class="hint" id="hint"></p>
+  </section>
+  <div class="controls">
+    <section aria-labelledby="lblStyle">
+      <p class="label" id="lblStyle">Style</p>
+      <div class="row" id="styles" role="group" aria-labelledby="lblStyle"></div>
+    </section>
+    <section aria-labelledby="lblSize">
+      <p class="label" id="lblSize">Size</p>
+      <div class="size-row">
+        <input id="size" type="range" min="10" max="100" step="1" value="56" aria-labelledby="lblSize">
+        <output id="sizeVal" for="size">56 px</output>
+      </div>
+    </section>
+    <section aria-labelledby="lblStroke">
+      <p class="label" id="lblStroke">Stroke</p>
+      <div class="size-row">
+        <input id="stroke" type="range" min="0" max="20" step="1" value="0" aria-labelledby="lblStroke">
+        <output id="strokeVal" for="stroke">0 px</output>
+      </div>
+      <p class="hint">Outlines the letters in black or white, whichever contrasts with the text color.</p>
+    </section>
+    <section aria-labelledby="lblColor">
+      <p class="label" id="lblColor">Color</p>
+      <div class="row" id="palFg" role="group" aria-labelledby="lblColor"></div>
+      <div class="hexrow" id="hexFg" hidden>
+        <input id="hexFgIn" type="text" inputmode="text" maxlength="7" placeholder="#FF8800" autocomplete="off" spellcheck="false" aria-label="Custom text color hex code">
+        <button class="btn" type="button" id="hexFgGo">Add</button>
+      </div>
+    </section>
+    <section aria-labelledby="lblBg">
+      <p class="label" id="lblBg">Background</p>
+      <div class="row" id="palBg" role="group" aria-labelledby="lblBg"></div>
+      <div class="hexrow" id="hexBg" hidden>
+        <input id="hexBgIn" type="text" inputmode="text" maxlength="7" placeholder="#101820" autocomplete="off" spellcheck="false" aria-label="Custom background color hex code">
+        <button class="btn" type="button" id="hexBgGo">Add</button>
+      </div>
+    </section>
+  </div>
+  <section aria-labelledby="lblDl">
+    <p class="label" id="lblDl">Download</p>
+    <div class="dl" id="dl"></div>
+    <p class="dl-note" id="dlNote">.jpg and .pdf fill a transparent background with white or black.</p>
+  </section>
+  <!-- BANNER / ADS / DONATE / SPONSOR (bottom): replace banner-bottom.jpg (1200 x 150) and set the href -->
+  <a class="slot" id="slotBottom" href="#" target="_blank" rel="sponsored noopener" aria-label="Banner, ads, donate, sponsor">
+    <img src="banner-bottom.jpg" width="1200" height="150" alt="Banner / Ads / Donate / Sponsor">
+  </a>
+  <footer>&copy; PT Bayu Angora Space</footer>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>
