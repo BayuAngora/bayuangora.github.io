@@ -9,7 +9,7 @@
   --focus: #ca0;
   --font-display: "Noto Sans", system-ui, sans-serif;
   --font-body: "Noto Sans", system-ui, sans-serif;
-  --font-mono: "Noto Sans", systen-ui, sans-serif;
+  --font-mono: "Noto Sans", system-ui, sans-serif;
   color-scheme: dark;
 }
 html, body { height: auto; }
