@@ -161,7 +161,7 @@
     ctx.setTransform(sc, 0, 0, sc, 0, 0);
     ctx.clearRect(0, 0, geo.W, geo.H);
     var bg = cfg.bg;
-    if (opts && opts.opaque && !bg) bg = lum(cfg.color || outlineColor(cfg)) < 0.4 ? '#ffffff' : '#000000';
+    if (opts && opts.opaque && !bg) bg = lum(cfg.color || outlineColor(cfg)) < 0.4 ? '#fff' : '#000';
     if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, geo.W, geo.H); }
     ctx.save();
     ctx.translate(geo.W / 2, geo.H / 2);
@@ -264,7 +264,7 @@
     var sc = SCRIPTS[state.script];
     state.converted = PADAS.convert(state.input, state.script);
     $('unicode').value = state.converted;
-    $('unicode').style.fontFamily = '"' + sc.family + '", var(--font-body)';
+    $('unicode').style.fontFamily = '"' + sc.family + '", var(--font)';
     $('out').setAttribute('aria-label', 'Aksara ' + sc.label + ': ' + state.input);
     var cfg = currentCfg();
     ensureFont(cfg).then(function () {
