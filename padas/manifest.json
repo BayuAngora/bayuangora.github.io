@@ -1,0 +1,58 @@
+{
+  "id": "PADAS",
+  "name": "PADAS",
+  "short_name": "PADAS",
+  "description": "★★★★★",
+  "lang": "id",
+  "dir": "auto",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "any",
+  "theme_color": "#111",
+  "background_color": "#111",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "categories": [
+    "website"
+  ],
+  "shortcuts": [
+    {
+      "name": "PADAS",
+      "url": "/"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "id": "PADAS",
+      "url": "/"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/favicon.webp",
+      "type": "image/webp",
+      "sizes": "1280x1280",
+      "form-factor": "narrow"
+    }
+  ]
+}
