@@ -50,35 +50,35 @@
   <a class="slot" id="slotTop" href="#" target="_blank" rel="sponsored noopener" aria-label="Banner, ads, donate, sponsor">
     <img src="/padas/banner.png" width="728" height="90" alt="Banner / Ads / Donate / Sponsor">
   </a>
-  <div aria-labelledby="lblScript">
+  <div>
     <p class="label" id="lblScript">AKSARA</p>
     <div class="row" id="scripts" role="group" aria-labelledby="lblScript"></div>
   </div>
-  <div aria-labelledby="lblResult">
+  <div>
     <p class="label" id="lblResult">RESULT</p>
     <div class="stage"><canvas id="out" role="img" aria-label="Rendered aksara"></canvas></div>
     <div class="unicode-row">
       <textarea id="unicode" readonly aria-label="Result as Unicode text" spellcheck="false"></textarea>
     </div>
   </div>
-  <div aria-labelledby="lblInput">
+  <div>
     <p class="label" id="lblInput">INPUT</p>
     <textarea id="input" maxlength="800" spellcheck="false" placeholder="Type Latin text here"></textarea>
     <p class="hint" id="hint"></p>
   </div>
   <div class="controls">
-    <div aria-labelledby="lblStyle">
+    <div>
       <p class="label" id="lblStyle">STYLE</p>
       <div class="row" id="styles" role="group" aria-labelledby="lblStyle"></div>
     </div>
-    <div aria-labelledby="lblSize">
+    <div>
       <p class="label" id="lblSize">SIZE</p>
       <div class="size-row">
         <input id="size" type="range" min="10" max="100" step="1" value="36" aria-labelledby="lblSize">
         <output id="sizeVal" for="size">36 px</output>
       </div>
     </div>
-    <div aria-labelledby="lblStroke">
+    <div>
       <p class="label" id="lblStroke">STROKE</p>
       <div class="size-row">
         <input id="stroke" type="range" min="0" max="20" step="1" value="0" aria-labelledby="lblStroke">
@@ -86,7 +86,7 @@
       </div>
       <p class="hint">Outlines the letters in black or white, whichever contrasts with the text color.</p>
     </div>
-    <div aria-labelledby="lblColor">
+    <div>
       <p class="label" id="lblColor">COLOR</p>
       <div class="row" id="palFg" role="group" aria-labelledby="lblColor"></div>
       <div class="hexrow" id="hexFg" hidden>
@@ -94,7 +94,7 @@
         <button class="btn" type="button" id="hexFgGo">ADD</button>
       </div>
     </div>
-    <div aria-labelledby="lblBg">
+    <div>
       <p class="label" id="lblBg">BACKGROUND</p>
       <div class="row" id="palBg" role="group" aria-labelledby="lblBg"></div>
       <div class="hexrow" id="hexBg" hidden>
@@ -103,7 +103,7 @@
       </div>
     </div>
   </div>
-  <div aria-labelledby="lblDl">
+  <div>
     <p class="label" id="lblDl">DOWNLOAD</p>
     <div class="dl" id="dl"></div>
     <p class="dl-note" id="dlNote">Save as .png or .svg for transparent background.</p>
